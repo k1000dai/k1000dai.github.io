@@ -15,14 +15,18 @@ function makeRouter(models) {
       }
   ]);
 }
+/*header*/
 
 const ReactRoot = function reactroot() {
     const router = makeRouter();
     return (
-        <div className="root">
-            <SidebarView />
-            <RouterProvider router={router}/>
+        <div>
+            <div className="root-container">
+                <SidebarView />
+                <RouterProvider router={router}/>
+            </div>
         </div>
+        
     );
     }
 

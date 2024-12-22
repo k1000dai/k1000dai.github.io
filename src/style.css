@@ -1,18 +1,11 @@
-.test {
-    height: 100px;
-    width: auto;
-}
-
-.root {
+.root-container {
     display: flex;
     flex-direction: row;
-    height: 100vh;
-}
-
-.sidebar {
-    float: left;
+    /* height: 100vh; */
+    height: 100%;
 }
   
 .main {
     flex-grow: 1;
+    margin-top: 15px;
 }

@@ -13,6 +13,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
+import { Image } from "@mui/icons-material";
 
 const drawerWidth = 240;
 
@@ -31,7 +32,7 @@ const SidebarView = function sidebarview() {
             variant="permanent"
             anchor="left"
              >
-            <Toolbar />
+            <img src="face.jpeg" alt="face" width="200" height="200"　style={{ borderRadius: '50%', display: 'block',margin: '0 auto', padding: '10px' }}/>
             <Divider />
             <List>
             {['SNS', 'Contact', 'Background'].map((text, index) => (
