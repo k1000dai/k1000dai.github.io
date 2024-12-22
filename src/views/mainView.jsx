@@ -1,14 +1,11 @@
 import "/src/style.css";
 import { Typography } from "@mui/material";
 import Divider from '@mui/material/Divider';
+import Box from '@mui/material/Box';
 
 const MainView = function mainview() {
   return (
     <div className="main">
-      <Typography variant="h3" noWrap component="div">
-              Kohei Sendai/千代 航平
-      </Typography>
-      <Divider style={{margin: '10px'}} />
       <Typography variant="h4" component="h1" gutterBottom>
         ABOUT ME
       </Typography>

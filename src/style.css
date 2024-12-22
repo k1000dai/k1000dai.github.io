@@ -7,5 +7,6 @@
   
 .main {
     flex-grow: 1;
-    margin-top: 15px;
+    margin-top: 100px;
+    margin-left: 20px;
 }
