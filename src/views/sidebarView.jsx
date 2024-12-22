@@ -58,6 +58,8 @@ const AppBar = styled(MuiAppBar, {
     shouldForwardProp: (prop) => prop !== 'open',
   })(({ theme }) => ({
     zIndex: theme.zIndex.drawer + 1,
+    backgroundColor: '#AAE1EF',
+    color: 'black',
     transition: theme.transitions.create(['width', 'margin'], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
@@ -117,7 +119,7 @@ const SidebarView = function sidebarview() {
         <div className="sidebar">
             <Box sx={{ display: 'flex' }}>
             <CssBaseline />
-            <AppBar position="fixed" open={open} color="white">
+            <AppBar position="fixed" open={open} >
                 <Toolbar>
                 <IconButton
                     color="inherit"

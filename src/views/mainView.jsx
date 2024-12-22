@@ -29,6 +29,25 @@ const MainView = function mainview() {
       <Typography variant="h4" component="h1" gutterBottom>
         TRAVEL
       </Typography>
+      I have been to:
+      <ul>
+        <li>Sweden</li>
+        <li>Finland</li>
+        <li>Denmark</li>
+        <li>Germany</li>
+        <li>France</li>
+        <li>Italy</li>
+        <li>Switzerland</li>
+        <li>Spain</li>
+        <li>Portugal</li>
+        <li>UK</li>
+        <li>USA</li>
+        <li>Canada</li>
+        <li>China</li>
+        <li>South Korea</li>
+        <li>Thailand</li>
+      </ul>
+      
     </div>
   );
 }
