@@ -1,0 +1,1 @@
+# k1000dai.github.io
