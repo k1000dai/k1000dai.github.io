@@ -5,7 +5,7 @@
         "dev": "vite",
         "build": "vite build",
         "serve": "vite preview",
-        "deploy": "rm -r dist && rm -r docs && npm run build && mv dist docs"
+        "deploy": "rm -r docs && npm run build && mv dist docs"
     },
     "devDependencies": {
         "vite": "^4.4.11",
