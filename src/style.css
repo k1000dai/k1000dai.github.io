@@ -2,3 +2,17 @@
     height: 100px;
     width: auto;
 }
+
+.root {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.sidebar {
+    float: left;
+}
+  
+.main {
+    flex-grow: 1;
+}

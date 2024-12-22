@@ -19,7 +19,7 @@ function makeRouter(models) {
 const ReactRoot = function reactroot() {
     const router = makeRouter();
     return (
-        <div>
+        <div className="root">
             <SidebarView />
             <RouterProvider router={router}/>
         </div>
