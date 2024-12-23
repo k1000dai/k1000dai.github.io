@@ -135,7 +135,7 @@ const SidebarView = function sidebarview() {
                 >
                 <MenuIcon />
                 </IconButton>
-                <Typography variant="h4" noWrap component="div" style={{padding: '10px'}}>
+                <Typography className="topname" variant="h4" noWrap component="div" style={{padding: '10px'}}>
                 Kohei Sendai / 千代 航平
                 </Typography>
                 update 2024.12.22
@@ -151,14 +151,14 @@ const SidebarView = function sidebarview() {
                 </DrawerHeader>
             {open && (<div>
             <Divider />
-            <img src="face.jpeg" alt="face" width="200" height="200"　style={{ borderRadius: '50%', display: 'block',margin: '0 auto', padding: '10px' }}/>
+            <img className="face-image" onClick={() => {window.location.hash="#/"}} src="face.jpeg" alt="face" width="200" height="200"　style={{ borderRadius: '50%', display: 'block',margin: '0 auto', padding: '10px' }}/>
             <Divider />
             </div>
             )
             }
             
             <List>
-                <ListItem key="SNS" disablePadding>
+                <ListItem key="SNS" disablePadding onClick={() => {window.location.hash="#/sns"}}>
                 <ListItemButton>
                     <ListItemIcon>
                     <HubTwoToneIcon />
@@ -167,7 +167,7 @@ const SidebarView = function sidebarview() {
                 </ListItemButton>
                 </ListItem>
 
-                <ListItem key="Contact" disablePadding>
+                <ListItem key="Contact" disablePadding onClick={() => {window.location.hash="#/contact"}}>
                 <ListItemButton>
                     <ListItemIcon>
                     <MailIcon />

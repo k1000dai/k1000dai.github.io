@@ -3,8 +3,21 @@
     flex-direction: row;
     height: 100%;
 }
-  
+
 .main {
     margin-top: 64px; 
     padding: 16px;
+}
+
+.contact {
+    margin-top: 64px;
+    padding: 16px;
+}
+
+.face-image:hover {
+    cursor: pointer;
+}
+
+.topname:hover {
+    cursor: pointer;
 }
