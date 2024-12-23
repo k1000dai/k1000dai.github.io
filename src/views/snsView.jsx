@@ -10,7 +10,7 @@ import ArtTrackIcon from '@mui/icons-material/ArtTrack';
 
 const SnsView = function snsview() {
     return (
-        <div className="contact">
+        <div className="sns">
         <Typography variant="h4" gutterBottom component="div">
             SNS・GitHub
         </Typography>

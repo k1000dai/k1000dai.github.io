@@ -8,7 +8,15 @@
     margin-top: 64px; 
     padding: 16px;
 }
-
+@media (max-width: 600px) {
+    .root-container {
+      flex-direction: column;
+    }
+    .main, .contact ,.sns{
+      margin-top: 16px;
+      width: 100%;
+    }
+}
 .contact {
     margin-top: 64px;
     padding: 16px;
