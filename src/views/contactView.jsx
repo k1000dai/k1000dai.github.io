@@ -13,7 +13,10 @@ const ContactView = function contactview() {
         <Divider />
         <div>
             <p>For any inquiries, please contact me at:</p>
-            <p>Email: kouhei.sendai [at] gmail.com</p>
+            <Divider />
+            <p className="email">Personal: kouhei.sendai [at] gmail.com</p>
+            <p className="email">University: sendai-kohei [at] g.ecc.u-tokyo.ac.jp</p>
+            <Divider />
         </div>
         <Button onClick={() => {window.location.hash="#/"}} variant="contained" color="primary">
             Back to Home

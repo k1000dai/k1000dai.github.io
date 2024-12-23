@@ -1,22 +1,52 @@
 import "/src/style.css";
-import { Typography } from "@mui/material";
+import { Typography,List,ListItem,ListItemText } from "@mui/material";
 import Divider from '@mui/material/Divider';
 import Box from '@mui/material/Box';
+
 
 const MainView = function mainview() {
   return (
     <div className="main">
       <Typography variant="h4" component="h1" gutterBottom>
         ABOUT ME
+        <Divider />
       </Typography>
-      <p>Hi! I'm Kohei Sendai. I'm a university student at Univserity of Tokyo.</p>
+      <p>Undergraduate student, B3, University of Tokyo. </p>
       <Typography variant="h4" component="h1" gutterBottom>
         SKILLS
+        <Divider />
       </Typography>
-      <p>Python, C++, React, HTML, CSS, JavaScript</p>
+      
+      <div>
+        <p className="lang-name">Python</p>
+      </div>
+      <div>
+        <p className="lang-name">C++</p>
+      </div>
+      <div>
+        <p className="lang-name">Java</p>
+      </div>
+      <div>
+        <p className="lang-name">JavaScript</p>
+      </div>
+      <div>
+        <p className="lang-name">HTML/CSS</p>
+      </div>
+      <div>
+        <p className="lang-name">React</p>
+      </div>
+      <div>
+        <p className="lang-name">OCaml</p>
+      </div>
+      <div>
+        <p className="lang-name">OpemMP/CUDA</p>
+      </div>
+      
+      
 
       <Typography variant="h4" component="h1" gutterBottom>
         EXPERIENCE
+        <Divider />
       </Typography>
       <p>AUA Youth Forum 2020 </p>
       <p>UGIP : Undergraduate Internship Program</p>
@@ -28,6 +58,7 @@ const MainView = function mainview() {
 
       <Typography variant="h4" component="h1" gutterBottom>
         TRAVEL
+        <Divider />
       </Typography>
       I have been to:
       <ul>

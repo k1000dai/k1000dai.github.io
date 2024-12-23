@@ -21,3 +21,31 @@
 .topname:hover {
     cursor: pointer;
 }
+
+/*SNS*/
+.sns-item {
+    display: 'flex';
+    align-items: 'center';
+    padding: 15px ;
+}
+
+.sns-name {
+    display: inline;
+    font-size: large;
+}
+
+/*Contact*/
+.email {
+    font-weight: 1200;
+    font-size: x-large;
+}
+
+
+/* Main */
+.lang-name {
+    font-size: 20px;
+    margin: 0 auto;
+    display: inline;
+    padding-left: 10px;
+    align-items: center;
+}

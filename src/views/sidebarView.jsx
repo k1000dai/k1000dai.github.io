@@ -17,7 +17,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
+import HomeIcon from '@mui/icons-material/Home';
 import MailIcon from '@mui/icons-material/Mail';
 import HubTwoToneIcon from '@mui/icons-material/HubTwoTone';
 import { HowToReg } from "@mui/icons-material";
@@ -135,7 +135,7 @@ const SidebarView = function sidebarview() {
                 >
                 <MenuIcon />
                 </IconButton>
-                <Typography className="topname" variant="h4" noWrap component="div" style={{padding: '10px'}}>
+                <Typography onClick={() => {window.location.hash="#/"}} className="topname" variant="h4" noWrap component="div" style={{padding: '10px'}}>
                 Kohei Sendai / 千代 航平
                 </Typography>
                 update 2024.12.22
@@ -158,21 +158,28 @@ const SidebarView = function sidebarview() {
             }
             
             <List>
-                <ListItem key="SNS" disablePadding onClick={() => {window.location.hash="#/sns"}}>
+                <ListItem key="About" disablePadding onClick={() => {window.location.hash="#/"}}>
                 <ListItemButton>
                     <ListItemIcon>
-                    <HubTwoToneIcon />
+                    <HomeIcon/>
                     </ListItemIcon>
-                    <ListItemText primary="SNS" />
-                </ListItemButton>
+                    <ListItemText primary="About" />
+                </ListItemButton> 
                 </ListItem>
-
                 <ListItem key="Contact" disablePadding onClick={() => {window.location.hash="#/contact"}}>
                 <ListItemButton>
                     <ListItemIcon>
                     <MailIcon />
                     </ListItemIcon>
                     <ListItemText primary="Contact" />
+                </ListItemButton>
+                </ListItem>
+                <ListItem key="SNS" disablePadding onClick={() => {window.location.hash="#/sns"}}>
+                <ListItemButton>
+                    <ListItemIcon>
+                    <HubTwoToneIcon />
+                    </ListItemIcon>
+                    <ListItemText primary="SNS" />
                 </ListItemButton>
                 </ListItem>
             </List>

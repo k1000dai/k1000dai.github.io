@@ -1,6 +1,7 @@
 import { MainView } from "./views/mainView";
 import { SidebarView } from "./views/sidebarView";
 import { ContactView } from "./views/contactView";
+import { SnsView } from "./views/snsView";
 import {createHashRouter, RouterProvider} from 'react-router-dom';
 
 function makeRouter(models) {
@@ -12,6 +13,10 @@ function makeRouter(models) {
       {
         path: "/contact",
         element: <ContactView />
+      },
+      {
+        path : "/sns",
+        element: <SnsView />
       }
   ]);
 }
