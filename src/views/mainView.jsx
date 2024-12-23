@@ -53,7 +53,7 @@ const MainView = function mainview() {
       <p><a href="https://www.u-tokyo.ac.jp/content/400237694.pdf">UGIP ～Global Business Experience by DAIKIN～ 2023.6 ~ 2023.10</a></p>
       <p>AI Engineer at morpho AI solutions 2022.10 ~ 2024.7 <a href="https://www.morphoai.com/">Home Page</a></p>
       <p>SNNC : Student Nobel Night Cap Volunteer, 2024, Food and Beverage, Room and Process Manager <a href="https://snnc.se/">Home Page</a></p>
-      <p>RoboTech : circuit design team</p>
+      <p>RoboTech : circuit design team <a href="https://www.youtube.com/watch?v=p26yrFr8vX8">RC 2024</a></p>
       <p>Internship at Matsuo lab from 2024.10 ~ </p>
       <p>Exchage student at KTH in Sweden from 2024.8 ~ 2025.6</p>
 

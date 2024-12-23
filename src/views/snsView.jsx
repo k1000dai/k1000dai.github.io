@@ -6,7 +6,8 @@ import { GitHub } from "@mui/icons-material";
 import { Instagram } from "@mui/icons-material";
 import { Twitter } from "@mui/icons-material";
 import { LinkedIn } from "@mui/icons-material";
-import { Note } from "@mui/icons-material";
+import ArtTrackIcon from '@mui/icons-material/ArtTrack';
+
 const SnsView = function snsview() {
     return (
         <div className="contact">
@@ -35,7 +36,7 @@ const SnsView = function snsview() {
         </div>
         <Divider />
         <div className="sns-item">
-            <Note style={{ verticalAlign: 'middle', marginRight: '8px' }} />
+            <img src="icon.png" alt="icon" style={{ verticalAlign: 'middle', marginRight: '8px',height: '30px' }} />
             <p className="sns-name"> Note <a href="https://note.com/duckduck1836">duckduck1836</a></p>
         </div>
         <Divider />
