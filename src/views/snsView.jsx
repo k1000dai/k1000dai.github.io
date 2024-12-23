@@ -6,7 +6,7 @@ import { GitHub } from "@mui/icons-material";
 import { Instagram } from "@mui/icons-material";
 import { Twitter } from "@mui/icons-material";
 import { LinkedIn } from "@mui/icons-material";
-
+import { Note } from "@mui/icons-material";
 const SnsView = function snsview() {
     return (
         <div className="contact">
@@ -33,9 +33,18 @@ const SnsView = function snsview() {
             <LinkedIn style={{ verticalAlign: 'middle', marginRight: '8px' }} />
             <p className="sns-name"> Linked In <a href="https://www.linkedin.com/in/kohei-sendai-890505312/">Kohei Sendai</a></p>
         </div>
+        <Divider />
+        <div className="sns-item">
+            <Note style={{ verticalAlign: 'middle', marginRight: '8px' }} />
+            <p className="sns-name"> Note <a href="https://note.com/duckduck1836">duckduck1836</a></p>
+        </div>
+        <Divider />
+        <div>
         <Button onClick={() => {window.location.hash="#/"}} variant="contained" color="primary">
             Back to Home
         </Button>
+        </div>
+        
         </div>
     );
 }
