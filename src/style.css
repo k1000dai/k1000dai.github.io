@@ -102,3 +102,12 @@ visibility: visible;
 opacity: 1;
 font-size: 10px;
 }
+
+.date {
+    display: inline-block;
+    width: 200px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: large;
+    font-weight: bold;
+}
