@@ -18,7 +18,7 @@ const MainView = function mainview() {
       </Typography>
       <div className="experience">
       <p><div className="date">2020.09</div> <a href="https://camp-fire.jp/projects/325017/view">Cloud Funding at Compfire</a></p>
-      <p><div className="date">2022.10</div><a href="https://nu.edu.kz/news/meta-silk-road-aua-youth-forum-kicked-off-at-nu">AUA Youth Forum 2022 </a> : noteの記事は<a href="https://note.com/duckduck1836/n/n399441713f33">こちら</a></p>
+      <p><div className="date">2022.10</div><a href="https://nu.edu.kz/news/meta-silk-road-aua-youth-forum-kicked-off-at-nu">AUA Youth Forum 2022 </a> : noteの記事は<a href="https://note.com/duckduck1836/n/n399441713f33">こちら</a>, 留学体験記は<a href="https://www.u-tokyo.ac.jp/content/400210529.pdf">こちら(page.17)</a></p>
       <p><div className="date">2023.06 ~ 2023.10</div><a href="https://www.u-tokyo.ac.jp/content/400237694.pdf">UGIP ～Global Business Experience by DAIKIN～ </a></p>
       <p><div className="date">2022.10 ~ 2024.07</div>AI Engineer at morpho AI solutions : <a href="https://www.morphoai.com/">Home Page</a></p>
       <p><div className="date">2024.10 ~ 2024.12</div>SNNC : Student Nobel Night Cap Volunteer, 2024, Food and Beverage, Room and Process Manager <a href="https://snnc.se/">Home Page</a></p>
