@@ -138,7 +138,7 @@ const SidebarView = function sidebarview() {
                 <Typography onClick={() => {window.location.hash="#/"}} className="topname" variant="h4" noWrap component="div" style={{padding: '10px'}}>
                 Kohei Sendai / 千代 航平
                 </Typography>
-                update 2024.12.23
+                update 2024.12.24
                 </Toolbar>
             </AppBar>
             <Drawer variant="permanent" open={open}>
