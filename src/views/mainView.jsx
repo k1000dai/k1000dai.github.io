@@ -197,8 +197,10 @@ const MainView = function mainview() {
           🇲🇾
           <span className="tooltip-text">Malaysia</span>
         </div>
-
-      
+        <div className="country-flag">
+          🇹🇭
+          <span className="tooltip-text">Thailand</span>
+        </div>
       </div>
       
     </div>
