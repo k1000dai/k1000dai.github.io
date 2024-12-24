@@ -49,6 +49,7 @@ const MainView = function mainview() {
         <Divider />
       </Typography>
       <div className="experience">
+      <p> Cloud Funding at Compfire <a href="https://camp-fire.jp/projects/325017/view">"コロナ禍の文化祭を　”ドローンフライトショー”　で盛り上げたい"</a></p>
       <p><a href="https://nu.edu.kz/news/meta-silk-road-aua-youth-forum-kicked-off-at-nu">AUA Youth Forum 2022 2022.10 </a> : noteの記事は<a href="https://note.com/duckduck1836/n/n399441713f33">こちら</a></p>
       <p><a href="https://www.u-tokyo.ac.jp/content/400237694.pdf">UGIP ～Global Business Experience by DAIKIN～ 2023.6 ~ 2023.10</a></p>
       <p>AI Engineer at morpho AI solutions 2022.10 ~ 2024.7 <a href="https://www.morphoai.com/">Home Page</a></p>
