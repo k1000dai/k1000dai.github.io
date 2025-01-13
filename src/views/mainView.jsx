@@ -158,6 +158,10 @@ const MainView = function mainview() {
           <span className="tooltip-text">Italy</span>
         </div>
         <div className="country-flag">
+          🇻🇦
+          <span className="tooltip-text">Vatican</span>
+        </div>
+        <div className="country-flag">
           🇵🇱
           <span className="tooltip-text">Poland</span>
         </div>
@@ -200,6 +204,10 @@ const MainView = function mainview() {
         <div className="country-flag">
           🇹🇭
           <span className="tooltip-text">Thailand</span>
+        </div>
+        <div className="country-flag">
+          🇮🇸
+          <span className="tooltip-text">Iceland</span>
         </div>
       </div>
       
