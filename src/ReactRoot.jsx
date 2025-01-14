@@ -2,6 +2,7 @@ import { MainView } from "./views/mainView";
 import { SidebarView } from "./views/sidebarView";
 import { ContactView } from "./views/contactView";
 import { SnsView } from "./views/snsView";
+import { Magic8BallView } from "./views/magic8BallView";
 import {createHashRouter, RouterProvider} from 'react-router-dom';
 
 function makeRouter(models) {
@@ -17,6 +18,10 @@ function makeRouter(models) {
       {
         path : "/sns",
         element: <SnsView />
+      },
+      {
+        path: "/magic8ball",
+        element: <Magic8BallView />
       }
   ]);
 }

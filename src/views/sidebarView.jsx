@@ -20,6 +20,7 @@ import ListItemText from '@mui/material/ListItemText';
 import HomeIcon from '@mui/icons-material/Home';
 import MailIcon from '@mui/icons-material/Mail';
 import HubTwoToneIcon from '@mui/icons-material/HubTwoTone';
+import CasinoIcon from '@mui/icons-material/Casino';
 import { HowToReg } from "@mui/icons-material";
 
 const drawerWidth = 240;
@@ -180,6 +181,14 @@ const SidebarView = function sidebarview() {
                     <HubTwoToneIcon />
                     </ListItemIcon>
                     <ListItemText primary="SNS" />
+                </ListItemButton>
+                </ListItem>
+                <ListItem key="Magic8Ball" disablePadding onClick={() => {window.location.hash="#/magic8ball"}}>
+                <ListItemButton>
+                    <ListItemIcon>
+                    <CasinoIcon />
+                    </ListItemIcon>
+                    <ListItemText primary="Magic 8 Ball" />
                 </ListItemButton>
                 </ListItem>
             </List>
