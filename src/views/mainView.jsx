@@ -1,217 +1,189 @@
 import "/src/style.css";
-import { Typography,List,ListItem,ListItemText } from "@mui/material";
+import { Typography, Card, CardContent, Box, Paper, Chip, Stack } from "@mui/material";
 import Divider from '@mui/material/Divider';
 
 const MainView = function mainview() {
-  return (
-    <div className="main">
-      <Typography variant="h4" component="h1" gutterBottom>
-        ABOUT ME
-        <Divider />
-      </Typography>
-      <p>Undergraduate student, B3, University of Tokyo. Systems Innovation, Faculty of Engineering</p>
-      <p>Exchage student at KTH,EECS in Sweden</p>
+  const skills = [
+    "Python", "C++", "Java", "JavaScript", "HTML/CSS", "React", "OCaml", "OpenMP/CUDA",
+    "実用英語技能検定1級", "TOEFL 90 (2022.10)"
+  ];
 
-      <Typography variant="h4" component="h1" gutterBottom>
-        EXPERIENCE
-        <Divider />
-      </Typography>
-      <div className="experience">
-      <p><div className="date">2020.09</div> <a href="https://camp-fire.jp/projects/325017/view">Cloud Funding at Compfire</a></p>
-      <p><div className="date">2022.10</div><a href="https://nu.edu.kz/news/meta-silk-road-aua-youth-forum-kicked-off-at-nu">AUA Youth Forum 2022 </a> : noteの記事は<a href="https://note.com/duckduck1836/n/n399441713f33">こちら</a>, 留学体験記は<a href="https://www.u-tokyo.ac.jp/content/400210529.pdf">こちら(page.17)</a></p>
-      <p><div className="date">2023.06 ~ 2023.10</div><a href="https://www.u-tokyo.ac.jp/content/400237694.pdf">UGIP ～Global Business Experience by DAIKIN～ </a></p>
-      <p><div className="date">2022.10 ~ 2024.07</div>AI Engineer at morpho AI solutions : <a href="https://www.morphoai.com/">Home Page</a></p>
-      <p><div className="date">2024.10 ~ 2024.12</div>SNNC : Student Nobel Night Cap Volunteer, 2024, Food and Beverage, Room and Process Manager <a href="https://snnc.se/">Home Page</a></p>
-      <p><div className="date">2022.04 ~ now</div>RoboTech : circuit design team <a href="https://www.youtube.com/watch?v=p26yrFr8vX8">RC 2024</a></p>
-      <p><div className="date">2024.10 ~ now</div>Internship at Matsuo lab</p>
-      <p><div className="date">2024.08 ~ 2025.06</div>Exchage student at KTH in Sweden</p>
-      </div>
-      <Typography variant="h4" component="h1" gutterBottom>
-        SKILLS
-        <Divider />
-      </Typography>
-      <div className="langueges">
-      <div>
-        <p className="lang-name">Python</p>
-      </div>
-      <div>
-        <p className="lang-name">C++</p>
-      </div>
-      <div>
-        <p className="lang-name">Java</p>
-      </div>
-      <div>
-        <p className="lang-name">JavaScript</p>
-      </div>
-      <div>
-        <p className="lang-name">HTML/CSS</p>
-      </div>
-      <div>
-        <p className="lang-name">React</p>
-      </div>
-      <div>
-        <p className="lang-name">OCaml</p>
-      </div>
-      <div>
-        <p className="lang-name">OpemMP/CUDA</p>
-      </div>
-      <div>
-        <p className="lang-name">実用英語技能検定1級</p>
-      </div>
-      <div>
-        <p className="lang-name">TOEFL 90 (2022.10)</p>
-      </div>
-      </div>
-      
-      <Typography variant="h4" component="h1" gutterBottom>
-        TRAVEL
-        <Divider />
-      </Typography>
-      I have been to:
-      <div className="countries">
-        <div className="country-flag">
-          🇯🇵
-          <span className="tooltip-text">Japan</span>
-        </div>
-        <div className="country-flag">
-          🇰🇷  
-          <span className="tooltip-text">Korea</span>
-        </div>
-        <div className="country-flag">
-          🇭🇰
-          <span className="tooltip-text">Hong Kong</span>
-        </div>
-        <div className="country-flag">
-          🇨🇳
-          <span className="tooltip-text">China</span>
-        </div>
-        <div className="country-flag">
-          🇲🇴
-          <span className="tooltip-text">Macau</span>
-        </div>
-        <div className="country-flag">
-          🇹🇼
-          <span className="tooltip-text">Taiwan</span>
-        </div>
-        <div className="country-flag">
-          🇵🇭
-          <span className="tooltip-text">Philippines</span>
-        </div>
-        <div className="country-flag">
-          🇰🇿
-          <span className="tooltip-text">Kazakhstan</span>
-        </div>
-        <div className="country-flag">
-          🇮🇳
-          <span className="tooltip-text">India</span>
-        </div>
-        <div className="country-flag">
-          🇸🇪
-          <span className="tooltip-text">Sweden</span>
-        </div>
-        <div className="country-flag">
-          🇫🇮
-          <span className="tooltip-text">Finland</span>
-        </div>
-        <div className="country-flag">
-          🇩🇰
-          <span className="tooltip-text">Denmark</span>
-        </div>
-        <div className="country-flag">
-          🇩🇪
-          <span className="tooltip-text">Germany</span>
-        </div>
-        <div className="country-flag">
-          🇳🇱
-          <span className="tooltip-text">Netherlands</span>
-        </div>
-        <div className="country-flag">
-          🇧🇪
-          <span className="tooltip-text">Belgium</span>
-        </div>
-        <div className="country-flag">
-          🇬🇧
-          <span className="tooltip-text">UK</span>
-        </div>
-        <div className="country-flag">
-          🇮🇪
-          <span className="tooltip-text">Ireland</span>
-        </div>
-        <div className="country-flag">
-          🇨🇭
-          <span className="tooltip-text">Switzerland</span>
-        </div>
-        <div className="country-flag">
-          🇪🇸
-          <span className="tooltip-text">Spain</span>
-        </div>
-        <div className="country-flag">
-          🇵🇹
-          <span className="tooltip-text">Portugal</span>
-        </div>
-        <div className="country-flag">
-          🇫🇷
-          <span className="tooltip-text">France</span>
-        </div>
-        <div className="country-flag">
-          🇮🇹
-          <span className="tooltip-text">Italy</span>
-        </div>
-        <div className="country-flag">
-          🇻🇦
-          <span className="tooltip-text">Vatican</span>
-        </div>
-        <div className="country-flag">
-          🇵🇱
-          <span className="tooltip-text">Poland</span>
-        </div>
-        <div className="country-flag">
-          🇨🇿
-          <span className="tooltip-text">Czech</span>
-        </div>
-        <div className="country-flag">
-          🇦🇹
-          <span className="tooltip-text">Austria</span>
-        </div>
-        <div className="country-flag">
-          🇸🇰
-          <span className="tooltip-text">Slovakia</span>
-        </div>
-        <div className="country-flag">
-          🇭🇺
-          <span className="tooltip-text">Hungary</span>
-        </div>
-        <div className="country-flag">
-          🇬🇷
-          <span className="tooltip-text">Greece</span>
-        </div>
-        <div className="country-flag">
-          🇺🇸
-          <span className="tooltip-text">USA</span>
-        </div>
-        <div className="country-flag">
-          🇨🇦
-          <span className="tooltip-text">Canada</span>
-        </div>
-        <div className="country-flag">
-          🇸🇬
-          <span className="tooltip-text">Singapore</span>
-        </div>
-        <div className="country-flag">
-          🇲🇾
-          <span className="tooltip-text">Malaysia</span>
-        </div>
-        <div className="country-flag">
-          🇹🇭
-          <span className="tooltip-text">Thailand</span>
-        </div>
-        <div className="country-flag">
-          🇮🇸
-          <span className="tooltip-text">Iceland</span>
-        </div>
-      </div>
-      
-    </div>
+  return (
+    <Box className="main" sx={{ maxWidth: 1200, margin: '0 auto', mt: 8 }}>
+      <Stack spacing={4}>
+        {/* About Section */}
+        <Paper elevation={2} sx={{ p: 3 }}>
+          <Typography variant="h4" component="h1" gutterBottom>
+            ABOUT ME
+          </Typography>
+          <Divider sx={{ mb: 2 }} />
+          <Typography variant="body1" >
+            Undergraduate student, B3, University of Tokyo. Systems Innovation, Faculty of Engineering
+          </Typography>
+          <Typography variant="body1">
+            Exchange student at KTH, EECS in Sweden
+          </Typography>
+        </Paper>
+
+        {/* Experience Section */}
+        <Paper elevation={2} sx={{ p: 3 }}>
+          <Typography variant="h4" component="h1" gutterBottom>
+            EXPERIENCE
+          </Typography>
+          <Divider sx={{ mb: 2 }} />
+          <Stack spacing={2}>
+            <Card variant="outlined" sx={{ 
+              '&:hover': {
+                boxShadow: 3,
+                transform: 'scale(1.01)',
+                transition: 'all 0.2s ease-in-out'
+              }
+            }}>
+              <CardContent>
+                <Typography variant="h6" color="primary" sx={{ fontSize: '1.3rem' }}>2024.10 ~ now</Typography>
+                <Typography sx={{ fontSize: '1.1rem', mt: 1 }}>Internship at Matsuo lab</Typography>
+              </CardContent>
+            </Card>
+            <Card variant="outlined" sx={{ 
+              '&:hover': {
+                boxShadow: 3,
+                transform: 'scale(1.01)',
+                transition: 'all 0.2s ease-in-out'
+              }
+            }}>
+              <CardContent>
+                <Typography variant="h6" color="primary" sx={{ fontSize: '1.3rem' }}>2024.08 ~ 2025.06</Typography>
+                <Typography sx={{ fontSize: '1.1rem', mt: 1 }}>Exchange student at KTH in Sweden</Typography>
+              </CardContent>
+            </Card>
+            <Card variant="outlined" sx={{ 
+              '&:hover': {
+                boxShadow: 3,
+                transform: 'scale(1.01)',
+                transition: 'all 0.2s ease-in-out'
+              }
+            }}>
+              <CardContent>
+                <Typography variant="h6" color="primary" sx={{ fontSize: '1.3rem' }}>2024.10 ~ 2024.12</Typography>
+                <Typography sx={{ fontSize: '1.1rem', mt: 1 }}>
+                  SNNC : Student Nobel Night Cap Volunteer, 2024, Food and Beverage, Room and Process Manager{' '}
+                  <a href="https://snnc.se/">Home Page</a>
+                </Typography>
+              </CardContent>
+            </Card>
+            <Card variant="outlined">
+              <CardContent>
+                <Typography variant="h6" color="primary">2022.10 ~ 2024.07</Typography>
+                <Typography>
+                  AI Engineer at morpho AI solutions : <a href="https://www.morphoai.com/">Home Page</a>
+                </Typography>
+              </CardContent>
+            </Card>
+            <Card variant="outlined">
+              <CardContent>
+                <Typography variant="h6" color="primary">2022.04 ~ now</Typography>
+                <Typography>
+                  RoboTech : circuit design team <a href="https://www.youtube.com/watch?v=p26yrFr8vX8">RC 2024</a>
+                </Typography>
+              </CardContent>
+            </Card>
+            <Card variant="outlined">
+              <CardContent>
+                <Typography variant="h6" color="primary">2023.06 ~ 2023.10</Typography>
+                <Typography>
+                  <a href="https://www.u-tokyo.ac.jp/content/400237694.pdf">UGIP ～Global Business Experience by DAIKIN～</a>
+                </Typography>
+              </CardContent>
+            </Card>
+            <Card variant="outlined">
+              <CardContent>
+                <Typography variant="h6" color="primary">2022.10</Typography>
+                <Typography>
+                  <a href="https://nu.edu.kz/news/meta-silk-road-aua-youth-forum-kicked-off-at-nu">AUA Youth Forum 2022</a>
+                  {' '}:noteの記事は<a href="https://note.com/duckduck1836/n/n399441713f33">こちら</a>, 
+                  留学体験記は<a href="https://www.u-tokyo.ac.jp/content/400210529.pdf">こちら(page.17)</a>
+                </Typography>
+              </CardContent>
+            </Card>
+            <Card variant="outlined">
+              <CardContent>
+                <Typography variant="h6" color="primary">2020.09</Typography>
+                <Typography>
+                  <a href="https://camp-fire.jp/projects/325017/view">Cloud Funding at Compfire</a>
+                </Typography>
+              </CardContent>
+            </Card>
+          </Stack>
+        </Paper>
+
+        {/* Skills Section */}
+        <Paper elevation={2} sx={{ p: 3 }}>
+          <Typography variant="h4" component="h1" gutterBottom>
+            SKILLS
+          </Typography>
+          <Divider sx={{ mb: 2 }} />
+          <Stack direction="row" spacing={1} flexWrap="wrap" useFlexGap>
+            {skills.map((skill) => (
+              <Box key={skill}>
+                <Chip
+                  label={skill}
+                  color="primary"
+                  variant="outlined"
+                  sx={{ 
+                    fontSize: '1rem',
+                    p: 1,
+                    height: 'auto'
+                  }}
+                />
+              </Box>
+            ))}
+          </Stack>
+        </Paper>
+
+        {/* Travel Section */}
+        <Paper elevation={2} sx={{ p: 3 }}>
+          <Typography variant="h4" component="h1" gutterBottom>
+            TRAVEL
+          </Typography>
+          <Divider sx={{ mb: 2 }} />
+          <Typography variant="h6" gutterBottom>I have been to:</Typography>
+          <Stack direction="row" spacing={2} sx={{ mt: 1 }} flexWrap="wrap" useFlexGap>
+            {[
+              ["🇯🇵", "Japan"], ["🇰🇷", "Korea"], ["🇭🇰", "Hong Kong"], ["🇨🇳", "China"],
+              ["🇲🇴", "Macau"], ["🇹🇼", "Taiwan"], ["🇵🇭", "Philippines"], ["🇰🇿", "Kazakhstan"],
+              ["🇮🇳", "India"], ["🇸🇪", "Sweden"], ["🇫🇮", "Finland"], ["🇩🇰", "Denmark"],
+              ["🇩🇪", "Germany"], ["🇳🇱", "Netherlands"], ["🇧🇪", "Belgium"], ["🇬🇧", "UK"],
+              ["🇮🇪", "Ireland"], ["🇨🇭", "Switzerland"], ["🇪🇸", "Spain"], ["🇵🇹", "Portugal"],
+              ["🇫🇷", "France"], ["🇮🇹", "Italy"], ["🇻🇦", "Vatican"], ["🇵🇱", "Poland"],
+              ["🇨🇿", "Czech"], ["🇦🇹", "Austria"], ["🇸🇰", "Slovakia"], ["🇭🇺", "Hungary"],
+              ["🇬🇷", "Greece"], ["🇺🇸", "USA"], ["🇨🇦", "Canada"], ["🇸🇬", "Singapore"],
+              ["🇲🇾", "Malaysia"], ["🇹🇭", "Thailand"], ["🇮🇸", "Iceland"]
+            ].map(([flag, country]) => (
+              <Box key={country}>
+                <Paper 
+                  elevation={1}
+                  sx={{
+                    p: 1,
+                    textAlign: 'center',
+                    '&:hover': {
+                      transform: 'scale(1.1)',
+                      transition: 'transform 0.2s'
+                    }
+                  }}
+                >
+                  <Typography variant="h4" component="div">
+                    {flag}
+                  </Typography>
+                  <Typography variant="caption">
+                    {country}
+                  </Typography>
+                </Paper>
+              </Box>
+            ))}
+          </Stack>
+        </Paper>
+      </Stack>
+    </Box>
   );
 }
 

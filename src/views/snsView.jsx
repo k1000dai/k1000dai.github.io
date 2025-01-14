@@ -1,53 +1,133 @@
 import "/src/style.css";
-import Typography from '@mui/material/Typography';
+import { Box, Card, CardContent, Typography, Button, Paper, Stack } from '@mui/material';
 import Divider from '@mui/material/Divider';
-import Button from '@mui/material/Button';
-import { GitHub } from "@mui/icons-material";
-import { Instagram } from "@mui/icons-material";
-import { Twitter } from "@mui/icons-material";
-import { LinkedIn } from "@mui/icons-material";
-import ArtTrackIcon from '@mui/icons-material/ArtTrack';
+import { GitHub, Instagram, Twitter, LinkedIn, Home as HomeIcon } from "@mui/icons-material";
+import CreateIcon from '@mui/icons-material/Create';
+
+const SocialCard = ({ icon, platform, username, link }) => (
+  <Card 
+    variant="outlined"
+    sx={{
+      transition: 'all 0.3s ease',
+      '&:hover': {
+        transform: 'translateY(-8px)',
+        boxShadow: 3,
+        cursor: 'pointer',
+      }
+    }}
+    onClick={() => window.open(link, '_blank')}
+  >
+    <CardContent>
+      <Stack spacing={2} alignItems="center" sx={{ p: 1 }}>
+        <Box sx={{ 
+          backgroundColor: 'primary.light',
+          borderRadius: '50%',
+          p: 2,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}>
+          {icon}
+        </Box>
+        <Typography variant="h6" component="div">
+          {platform}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          {username}
+        </Typography>
+      </Stack>
+    </CardContent>
+  </Card>
+);
 
 const SnsView = function snsview() {
-    return (
-        <div className="sns">
-        <Typography variant="h4" gutterBottom component="div">
-            SNS・GitHub
+  const socialLinks = [
+    {
+      platform: "GitHub",
+      username: "k1000dai",
+      link: "https://github.com/k1000dai",
+      icon: <GitHub sx={{ fontSize: 40, color: '#fff' }} />
+    },
+    {
+      platform: "Instagram",
+      username: "k.1000dai",
+      link: "https://www.instagram.com/k.1000dai/",
+      icon: <Instagram sx={{ fontSize: 40, color: '#fff' }} />
+    },
+    {
+      platform: "Twitter",
+      username: "Kohei Sendai",
+      link: "https://x.com/PgChiyo",
+      icon: <Twitter sx={{ fontSize: 40, color: '#fff' }} />
+    },
+    {
+      platform: "LinkedIn",
+      username: "Kohei Sendai",
+      link: "https://www.linkedin.com/in/kohei-sendai-890505312/",
+      icon: <LinkedIn sx={{ fontSize: 40, color: '#fff' }} />
+    },
+    {
+      platform: "Note",
+      username: "duckduck1836",
+      link: "https://note.com/duckduck1836",
+      icon: <CreateIcon sx={{ fontSize: 40, color: '#fff' }} />
+    }
+  ];
+
+  return (
+    <Box className="sns" sx={{ maxWidth: 1200, margin: '0 auto', p: 3, mt: 8 }}>
+      <Paper elevation={2} sx={{ p: 4 }}>
+        <Typography variant="h4" gutterBottom align="center">
+          Social Media & Links
         </Typography>
-        <Divider />
-        <div className="sns-item">
-            <GitHub style={{ verticalAlign: 'middle', marginRight: '8px' }} />
-            <p className="sns-name"> GitHub <a href="https://github.com/k1000dai" >k1000dai</a></p>
-        </div>
-        <Divider />
-        <div className="sns-item">
-            <Instagram style={{ verticalAlign: 'middle', marginRight: '8px' }} />
-            <p className="sns-name"> Instagram  <a href="https://www.instagram.com/k.1000dai/">k.1000dai</a></p>
-        </div>
-        <Divider />
-        <div className="sns-item">
-            <Twitter style={{ verticalAlign: 'middle', marginRight: '8px' }} />
-            <p className="sns-name"> Twitter <a href="https://x.com/PgChiyo">Kohei Sendai</a> </p>
-        </div>
-        <Divider />
-        <div className="sns-item">
-            <LinkedIn style={{ verticalAlign: 'middle', marginRight: '8px' }} />
-            <p className="sns-name"> Linked In <a href="https://www.linkedin.com/in/kohei-sendai-890505312/">Kohei Sendai</a></p>
-        </div>
-        <Divider />
-        <div className="sns-item">
-            <img src="icon.png" alt="icon" style={{ verticalAlign: 'middle', marginRight: '8px',height: '30px' }} />
-            <p className="sns-name"> Note <a href="https://note.com/duckduck1836">duckduck1836</a></p>
-        </div>
-        <Divider />
-        <div>
-        <Button onClick={() => {window.location.hash="#/"}} variant="contained" color="primary">
+        <Divider sx={{ mb: 4 }} />
+
+        <Stack 
+          direction="row" 
+          flexWrap="wrap" 
+          spacing={3} 
+          useFlexGap 
+          sx={{ 
+            mb: 4,
+            '& > *': {
+              flexBasis: {
+                xs: '100%',
+                sm: 'calc(50% - 24px)',
+                md: 'calc(33.333% - 24px)'
+              }
+            }
+          }}
+        >
+          {socialLinks.map((social) => (
+            <SocialCard key={social.platform} {...social} />
+          ))}
+        </Stack>
+
+        <Box sx={{ textAlign: 'center' }}>
+          <Button
+            variant="contained"
+            color="primary"
+            size="large"
+            startIcon={<HomeIcon />}
+            onClick={() => {window.location.hash="#/"}}
+            sx={{
+              px: 4,
+              py: 1.5,
+              borderRadius: 2,
+              textTransform: 'none',
+              fontSize: '1.1rem',
+              transition: 'transform 0.2s',
+              '&:hover': {
+                transform: 'scale(1.05)'
+              }
+            }}
+          >
             Back to Home
-        </Button>
-        </div>
-        
-        </div>
-    );
+          </Button>
+        </Box>
+      </Paper>
+    </Box>
+  );
 }
 
 export { SnsView };

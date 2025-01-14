@@ -40,7 +40,8 @@ export const Magic8BallView = () => {
             alignItems: 'center', 
             justifyContent: 'center',
             minHeight: '80vh',
-            padding: 3
+            padding: 3,
+            mt: 8
         }}>
             <Typography variant="h4" gutterBottom>
                 Programming Magic 8 Ball
