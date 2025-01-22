@@ -8,6 +8,68 @@ const MainView = function mainview() {
     "実用英語技能検定1級", "TOEFL 90 (2022.10)"
   ];
 
+  const countries = {
+    asia: [
+      ["🇨🇳", "China"], ["🇭🇰", "Hong Kong"], ["🇮🇳", "India"],
+      ["🇯🇵", "Japan"], ["🇰🇿", "Kazakhstan"], ["🇰🇷", "Korea"],
+      ["🇲🇴", "Macau"], ["🇲🇾", "Malaysia"], ["🇵🇭", "Philippines"],
+      ["🇸🇬", "Singapore"], ["🇹🇼", "Taiwan"], ["🇹🇭", "Thailand"]
+    ],
+    europe: [
+      ["🇦🇹", "Austria"], ["🇧🇪", "Belgium"], ["🇨🇿", "Czech"],
+      ["🇩🇰", "Denmark"], ["🇫🇮", "Finland"], ["🇫🇷", "France"],
+      ["🇩🇪", "Germany"], ["🇬🇷", "Greece"], ["🇭🇺", "Hungary"],
+      ["🇮🇸", "Iceland"], ["🇮🇪", "Ireland"], ["🇮🇹", "Italy"],
+      ["🇳🇱", "Netherlands"], ["🇳🇴", "Norway"], ["🇵🇱", "Poland"],
+      ["🇵🇹", "Portugal"], ["🇸🇰", "Slovakia"], ["🇪🇸", "Spain"],
+      ["🇸🇪", "Sweden"], ["🇨🇭", "Switzerland"], ["🇬🇧", "UK"],
+      ["🇻🇦", "Vatican"]
+    ],
+    northAmerica: [
+      ["🇨🇦", "Canada"], ["🇺🇸", "USA"]
+    ]
+  };
+
+  const CountryFlag = ({ flag, country }) => (
+    <Box key={country}>
+      <Paper 
+        elevation={1}
+        sx={{
+          p: 1,
+          textAlign: 'center',
+          '&:hover': {
+            transform: 'scale(1.1)',
+            transition: 'transform 0.2s'
+          }
+        }}
+      >
+        <Typography variant="h4" component="div">
+          {flag}
+        </Typography>
+        <Typography variant="caption">
+          {country}
+        </Typography>
+      </Paper>
+    </Box>
+  );
+
+  const RegionSection = ({ title, countries }) => (
+    <Box>
+      <Typography variant="h6" color="primary" gutterBottom>
+        {title} ({countries.length})
+      </Typography>
+      <Stack direction="row" spacing={2} flexWrap="wrap" useFlexGap>
+        {countries.map(([flag, country]) => (
+          <CountryFlag key={country} flag={flag} country={country} />
+        ))}
+      </Stack>
+    </Box>
+  );
+
+  const totalCountries = Object.values(countries).reduce(
+    (total, region) => total + region.length, 0
+  );
+
   return (
     <Box className="main" sx={{ maxWidth: 1200, margin: '0 auto', mt: 8 }}>
       <Stack spacing={4}>
@@ -146,40 +208,13 @@ const MainView = function mainview() {
             TRAVEL
           </Typography>
           <Divider sx={{ mb: 2 }} />
-          <Typography variant="h6" gutterBottom>I have been to:</Typography>
-          <Stack direction="row" spacing={2} sx={{ mt: 1 }} flexWrap="wrap" useFlexGap>
-            {[
-              ["🇯🇵", "Japan"], ["🇰🇷", "Korea"], ["🇭🇰", "Hong Kong"], ["🇨🇳", "China"],
-              ["🇲🇴", "Macau"], ["🇹🇼", "Taiwan"], ["🇵🇭", "Philippines"], ["🇰🇿", "Kazakhstan"],
-              ["🇮🇳", "India"], ["🇸🇪", "Sweden"], ["🇫🇮", "Finland"], ["🇩🇰", "Denmark"],
-              ["🇩🇪", "Germany"], ["🇳🇱", "Netherlands"], ["🇧🇪", "Belgium"], ["🇬🇧", "UK"],
-              ["🇮🇪", "Ireland"], ["🇨🇭", "Switzerland"], ["🇪🇸", "Spain"], ["🇵🇹", "Portugal"],
-              ["🇫🇷", "France"], ["🇮🇹", "Italy"], ["🇻🇦", "Vatican"], ["🇵🇱", "Poland"],
-              ["🇨🇿", "Czech"], ["🇦🇹", "Austria"], ["🇸🇰", "Slovakia"], ["🇭🇺", "Hungary"],
-              ["🇬🇷", "Greece"], ["🇺🇸", "USA"], ["🇨🇦", "Canada"], ["🇸🇬", "Singapore"],
-              ["🇲🇾", "Malaysia"], ["🇹🇭", "Thailand"], ["🇮🇸", "Iceland"]
-            ].map(([flag, country]) => (
-              <Box key={country}>
-                <Paper 
-                  elevation={1}
-                  sx={{
-                    p: 1,
-                    textAlign: 'center',
-                    '&:hover': {
-                      transform: 'scale(1.1)',
-                      transition: 'transform 0.2s'
-                    }
-                  }}
-                >
-                  <Typography variant="h4" component="div">
-                    {flag}
-                  </Typography>
-                  <Typography variant="caption">
-                    {country}
-                  </Typography>
-                </Paper>
-              </Box>
-            ))}
+          <Typography variant="h6" gutterBottom>
+            I have been to {totalCountries} countries/regions:
+          </Typography>
+          <Stack spacing={3}>
+            <RegionSection title="Asia" countries={countries.asia} />
+            <RegionSection title="Europe" countries={countries.europe} />
+            <RegionSection title="North America" countries={countries.northAmerica} />
           </Stack>
         </Paper>
       </Stack>
