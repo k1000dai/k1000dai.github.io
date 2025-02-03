@@ -23,7 +23,8 @@ const MainView = function mainview() {
       ["🇳🇱", "Netherlands"], ["🇳🇴", "Norway"], ["🇵🇱", "Poland"],
       ["🇵🇹", "Portugal"], ["🇸🇰", "Slovakia"], ["🇪🇸", "Spain"],
       ["🇸🇪", "Sweden"], ["🇨🇭", "Switzerland"], ["🇬🇧", "UK"],
-      ["🇻🇦", "Vatican"]
+      ["🇻🇦", "Vatican"], ["/transnistria-flag.png", "Transnistria"],
+      ["🇲🇩","Moldova"],["🇷🇴","romania"]
     ],
     northAmerica: [
       ["🇨🇦", "Canada"], ["🇺🇸", "USA"]
@@ -43,9 +44,25 @@ const MainView = function mainview() {
           }
         }}
       >
-        <Typography variant="h4" component="div">
-          {flag}
-        </Typography>
+        {flag.startsWith('/') ? (
+          <Box 
+            component="img"
+            src={flag}
+            alt={`${country} flag`}
+            sx={{
+              height: '2.2em',
+              minHeight: '2.5em',
+              width: 'auto',
+              display: 'block',
+              margin: '0 auto',
+              objectFit: 'contain'
+            }}
+          />
+        ) : (
+          <Typography variant="h4" component="div">
+            {flag}
+          </Typography>
+        )}
         <Typography variant="caption">
           {country}
         </Typography>
