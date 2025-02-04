@@ -24,7 +24,7 @@ const MainView = function mainview() {
       ["🇵🇹", "Portugal"], ["🇸🇰", "Slovakia"], ["🇪🇸", "Spain"],
       ["🇸🇪", "Sweden"], ["🇨🇭", "Switzerland"], ["🇬🇧", "UK"],
       ["🇻🇦", "Vatican"], ["/transnistria-flag.png", "Transnistria"],
-      ["🇲🇩","Moldova"],["🇷🇴","romania"]
+      ["🇲🇩","Moldova"],["🇷🇴","Romania"],["🇪🇪 ","Estonia"]
     ],
     northAmerica: [
       ["🇨🇦", "Canada"], ["🇺🇸", "USA"]
