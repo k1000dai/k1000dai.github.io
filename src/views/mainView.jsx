@@ -28,6 +28,9 @@ const MainView = function mainview() {
     ],
     northAmerica: [
       ["🇨🇦", "Canada"], ["🇺🇸", "USA"]
+    ],
+    africa: [
+        ["🇲🇦", "Morocco"]
     ]
   };
 
@@ -232,6 +235,7 @@ const MainView = function mainview() {
             <RegionSection title="Asia" countries={countries.asia} />
             <RegionSection title="Europe" countries={countries.europe} />
             <RegionSection title="North America" countries={countries.northAmerica} />
+            <RegionSection title="Africa" countries={countries.africa} />
           </Stack>
         </Paper>
       </Stack>
