@@ -153,7 +153,13 @@ const MainView = function mainview() {
                 </Typography>
               </CardContent>
             </Card>
-            <Card variant="outlined">
+            <Card variant="outlined" sx={{
+              '&:hover': {
+                boxShadow: 3,
+                transform: 'scale(1.01)',
+                transition: 'all 0.2s ease-in-out'
+              }
+            }}>
               <CardContent>
                 <Typography variant="h6" color="primary">2022.10 ~ 2024.07</Typography>
                 <Typography>
@@ -161,7 +167,13 @@ const MainView = function mainview() {
                 </Typography>
               </CardContent>
             </Card>
-            <Card variant="outlined">
+            <Card variant="outlined" sx={{
+              '&:hover': {
+                boxShadow: 3,
+                transform: 'scale(1.01)',
+                transition: 'all 0.2s ease-in-out'
+              }
+            }}>
               <CardContent>
                 <Typography variant="h6" color="primary">2022.04 ~ now</Typography>
                 <Typography>
@@ -169,7 +181,13 @@ const MainView = function mainview() {
                 </Typography>
               </CardContent>
             </Card>
-            <Card variant="outlined">
+            <Card variant="outlined" sx={{
+              '&:hover': {
+                boxShadow: 3,
+                transform: 'scale(1.01)',
+                transition: 'all 0.2s ease-in-out'
+              }
+            }}>
               <CardContent>
                 <Typography variant="h6" color="primary">2023.06 ~ 2023.10</Typography>
                 <Typography>
@@ -177,7 +195,13 @@ const MainView = function mainview() {
                 </Typography>
               </CardContent>
             </Card>
-            <Card variant="outlined">
+            <Card variant="outlined" sx={{
+              '&:hover': {
+                boxShadow: 3,
+                transform: 'scale(1.01)',
+                transition: 'all 0.2s ease-in-out'
+              }
+            }}>
               <CardContent>
                 <Typography variant="h6" color="primary">2022.10</Typography>
                 <Typography>
@@ -187,7 +211,13 @@ const MainView = function mainview() {
                 </Typography>
               </CardContent>
             </Card>
-            <Card variant="outlined">
+            <Card variant="outlined" sx={{
+              '&:hover': {
+                boxShadow: 3,
+                transform: 'scale(1.01)',
+                transition: 'all 0.2s ease-in-out'
+              }
+            }}>
               <CardContent>
                 <Typography variant="h6" color="primary">2020.09</Typography>
                 <Typography>
