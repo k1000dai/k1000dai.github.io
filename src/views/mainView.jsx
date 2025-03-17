@@ -24,13 +24,13 @@ const MainView = function mainview() {
       ["🇵🇹", "Portugal"], ["🇸🇰", "Slovakia"], ["🇪🇸", "Spain"],
       ["🇸🇪", "Sweden"], ["🇨🇭", "Switzerland"], ["🇬🇧", "UK"],
       ["🇻🇦", "Vatican"], ["/transnistria-flag.png", "Transnistria"],
-      ["🇲🇩","Moldova"],["🇷🇴","Romania"],["🇪🇪 ","Estonia"]
+      ["🇲🇩", "Moldova"], ["🇷🇴", "Romania"], ["🇪🇪", "Estonia"], ["🇷🇸", "Serbia"]
     ],
     northAmerica: [
       ["🇨🇦", "Canada"], ["🇺🇸", "USA"]
     ],
     africa: [
-        ["🇲🇦", "Morocco"]
+      ["🇲🇦", "Morocco"]
     ]
   };
 
