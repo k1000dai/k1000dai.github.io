@@ -24,7 +24,8 @@ const MainView = function mainview() {
       ["🇵🇹", "Portugal"], ["🇸🇰", "Slovakia"], ["🇪🇸", "Spain"],
       ["🇸🇪", "Sweden"], ["🇨🇭", "Switzerland"], ["🇬🇧", "UK"],
       ["🇻🇦", "Vatican"], ["/transnistria-flag.png", "Transnistria"],
-      ["🇲🇩", "Moldova"], ["🇷🇴", "Romania"], ["🇪🇪", "Estonia"], ["🇷🇸", "Serbia"]
+      ["🇲🇩", "Moldova"], ["🇷🇴", "Romania"], ["🇪🇪", "Estonia"], ["🇷🇸", "Serbia"],
+      ["🇱🇹","Lithuania"]
     ],
     northAmerica: [
       ["🇨🇦", "Canada"], ["🇺🇸", "USA"]
@@ -100,10 +101,10 @@ const MainView = function mainview() {
           </Typography>
           <Divider sx={{ mb: 2 }} />
           <Typography variant="body1" >
-            Undergraduate student, B3, University of Tokyo. Systems Innovation, Faculty of Engineering
+            Undergraduate student, B4, University of Tokyo. Systems Innovation, Faculty of Engineering
           </Typography>
           <Typography variant="body1">
-            Exchange student at KTH, EECS in Sweden
+            Exchange study at KTH, EECS in Sweden
           </Typography>
         </Paper>
 
