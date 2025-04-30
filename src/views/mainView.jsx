@@ -13,7 +13,7 @@ const MainView = function mainview() {
       ["🇨🇳", "China"], ["🇭🇰", "Hong Kong"], ["🇮🇳", "India"],
       ["🇯🇵", "Japan"], ["🇰🇿", "Kazakhstan"], ["🇰🇷", "Korea"],
       ["🇲🇴", "Macau"], ["🇲🇾", "Malaysia"], ["🇵🇭", "Philippines"],
-      ["🇸🇬", "Singapore"], ["🇹🇼", "Taiwan"], ["🇹🇭", "Thailand"]
+      ["🇸🇬", "Singapore"], ["🇹🇼", "Taiwan"], ["🇹🇭", "Thailand"],["🇹🇷","Turkey"]
     ],
     europe: [
       ["🇦🇹", "Austria"], ["🇧🇪", "Belgium"], ["🇨🇿", "Czech"],
@@ -25,7 +25,7 @@ const MainView = function mainview() {
       ["🇸🇪", "Sweden"], ["🇨🇭", "Switzerland"], ["🇬🇧", "UK"],
       ["🇻🇦", "Vatican"], ["/transnistria-flag.png", "Transnistria"],
       ["🇲🇩", "Moldova"], ["🇷🇴", "Romania"], ["🇪🇪", "Estonia"], ["🇷🇸", "Serbia"],
-      ["🇱🇹","Lithuania"]
+      ["🇱🇹","Lithuania"],["🇱🇻","Latvia"],["🇧🇬","Burugaria"],["🇨🇾","Cyprus"]
     ],
     northAmerica: [
       ["🇨🇦", "Canada"], ["🇺🇸", "USA"]
