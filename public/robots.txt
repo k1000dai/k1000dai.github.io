@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://k1000dai.github.io/sitemap.xml 

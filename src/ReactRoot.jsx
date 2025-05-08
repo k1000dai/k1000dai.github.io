@@ -4,6 +4,7 @@ import {ContactView} from "./views/contactView";
 import {SnsView} from "./views/snsView";
 import {Magic8BallView} from "./views/magic8BallView";
 import {createHashRouter, RouterProvider} from 'react-router-dom';
+import { Box } from '@mui/material';
 
 function makeRouter() {
     return createHashRouter([
@@ -30,13 +31,21 @@ function makeRouter() {
 const ReactRoot = function reactroot() {
     const router = makeRouter();
     return (
-        <div>
-            <div className="root-container">
+        <Box sx={{
+            minHeight: '100vh',
+            backgroundColor: 'var(--background-color)',
+            animation: 'fadeIn 0.5s ease-in'
+        }}>
+            <Box className="root-container" sx={{
+                position: 'relative',
+                '& > *': {
+                    animation: 'slideIn 0.5s ease-out'
+                }
+            }}>
                 <SidebarView />
                 <RouterProvider router={router} />
-            </div>
-        </div>
-
+            </Box>
+        </Box>
     );
 }
 
