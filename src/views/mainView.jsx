@@ -5,7 +5,7 @@ import Divider from '@mui/material/Divider';
 const MainView = function mainview() {
   const skills = [
     "Python", "C++", "Java", "JavaScript", "HTML/CSS", "React", "OCaml", "OpenMP/CUDA",
-    "実用英語技能検定1級", "TOEFL 90 (2022.10)"
+    "実用英語技能検定1級", "TOEFL 90 (2022.10)","Swedish A2"
   ];
 
   const countries = {
@@ -115,6 +115,18 @@ const MainView = function mainview() {
           </Typography>
           <Divider sx={{ mb: 2 }} />
           <Stack spacing={2}>
+            <Card variant="outlined" sx={{
+              '&:hover': {
+                boxShadow: 3,
+                transform: 'scale(1.01)',
+                transition: 'all 0.2s ease-in-out'
+              }
+            }}>
+              <CardContent>
+                <Typography variant="h6" color="primary" sx={{ fontSize: '1.3rem' }}>2025.05 ~ now </Typography>
+                <Typography sx={{ fontSize: '1.1rem', mt: 1 }}>Google Summer of Code : Debian Project "Package LLM Inference Libraries"</Typography>
+              </CardContent>
+            </Card>
             <Card variant="outlined" sx={{ 
               '&:hover': {
                 boxShadow: 3,
@@ -123,7 +135,7 @@ const MainView = function mainview() {
               }
             }}>
               <CardContent>
-                <Typography variant="h6" color="primary" sx={{ fontSize: '1.3rem' }}>2024.10 ~ now</Typography>
+                <Typography variant="h6" color="primary" sx={{ fontSize: '1.3rem' }}>2024.10 ~ 2025.05</Typography>
                 <Typography sx={{ fontSize: '1.1rem', mt: 1 }}>Internship at Matsuo lab</Typography>
               </CardContent>
             </Card>
