@@ -5,7 +5,7 @@ import Divider from '@mui/material/Divider';
 const MainView = function mainview() {
   const skills = [
     "Python", "C++", "Java", "JavaScript", "HTML/CSS", "React", "OCaml", "OpenMP/CUDA",
-    "実用英語技能検定1級", "TOEFL 90 (2022.10)","Swedish A2"
+    "実用英語技能検定1級", "TOEFL 103 (2025.06)","Swedish A2"
   ];
 
   const countries = {
@@ -104,7 +104,7 @@ const MainView = function mainview() {
             Undergraduate student, B4, University of Tokyo. Systems Innovation, Faculty of Engineering
           </Typography>
           <Typography variant="body1">
-            Exchange study at KTH, EECS in Sweden
+            Matsuo Iwasawa Labratory, Research on Robotics, Physical AI
           </Typography>
         </Paper>
 
@@ -136,7 +136,7 @@ const MainView = function mainview() {
             }}>
               <CardContent>
                 <Typography variant="h6" color="primary" sx={{ fontSize: '1.3rem' }}>2024.10 ~ 2025.05</Typography>
-                <Typography sx={{ fontSize: '1.1rem', mt: 1 }}>Internship at Matsuo lab</Typography>
+                <Typography sx={{ fontSize: '1.1rem', mt: 1 }}>Internship at Matsuo Iwasawa lab</Typography>
               </CardContent>
             </Card>
             <Card variant="outlined" sx={{ 
