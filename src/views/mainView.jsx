@@ -264,6 +264,25 @@ const MainView = function mainview() {
             ))}
           </Stack>
         </Paper>
+        {/* Debian Maintainer Section */}
+        <Paper elevation={2} sx={{ p: 3 }}>
+          <Typography variant="h4" component="h1" gutterBottom>
+            DEBIAN MAINTAINER
+          </Typography>
+          <Divider sx={{ mb: 2 }} />
+          <Typography variant="body1">
+            I am a Debian Maintainer, and I maintain the following packages:
+          </Typography>
+          {/*箇条書き*/}
+          <ul>
+            <li>ython3-huggingface-hub <a href="https://tracker.debian.org/pkg/huggingface-hub">tracker</a></li>
+            <li>python3-interegular <a href="https://tracker.debian.org/pkg/interegular">tracker</a></li>
+            <li>python3-partial-json-parser <a href="https://tracker.debian.org/pkg/partial-json-parser">tracker</a></li>
+          </ul>
+          <Typography variant="body1" sx={{ mt: 2 }}>
+            You can find my packages on the <a href="https://qa.debian.org/developer.php?login=kouhei.sendai%40gmail.com">Debian</a>.
+          </Typography>
+        </Paper>
 
         {/* Travel Section */}
         <Paper elevation={2} sx={{ p: 3 }}>
