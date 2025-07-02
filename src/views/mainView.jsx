@@ -1,6 +1,11 @@
 import "/src/style.css";
 import { Typography, Card, CardContent, Box, Paper, Chip, Stack } from "@mui/material";
 import Divider from '@mui/material/Divider';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import SvgIcon from '@mui/material/SvgIcon';
 
 const MainView = function mainview() {
   const skills = [
@@ -273,14 +278,25 @@ const MainView = function mainview() {
           <Typography variant="body1">
             I am a Debian Maintainer, and I maintain the following packages:
           </Typography>
-          {/*箇条書き*/}
-          <ul>
-            <li>ython3-huggingface-hub <a href="https://tracker.debian.org/pkg/huggingface-hub">tracker</a></li>
-            <li>python3-interegular <a href="https://tracker.debian.org/pkg/interegular">tracker</a></li>
-            <li>python3-partial-json-parser <a href="https://tracker.debian.org/pkg/partial-json-parser">tracker</a></li>
+          <Typography variant="body1" sx={{ mb: 1 }}>
+            Currently maintained packages:
+          </Typography>
+          <ul style={{ listStyle: 'none', paddingLeft: 0, margin: 0 }}>
+            <li style={{ marginBottom: '0.5em' }}>
+              <a href="https://tracker.debian.org/pkg/huggingface-hub" style={{ fontWeight: 500, color: '#1976d2', textDecoration: 'none', marginRight: 8 }}>python3-huggingface-hub</a>
+              <a href="https://tracker.debian.org/pkg/huggingface-hub" style={{ color: '#1976d2', textDecoration: 'underline' }}>tracker</a>
+            </li>
+            <li style={{ marginBottom: '0.5em' }}>
+              <a href="https://tracker.debian.org/pkg/interegular" style={{ fontWeight: 500, color: '#1976d2', textDecoration: 'none', marginRight: 8 }}>python3-interegular</a>
+              <a href="https://tracker.debian.org/pkg/interegular" style={{ color: '#1976d2', textDecoration: 'underline' }}>tracker</a>
+            </li>
+            <li style={{ marginBottom: '0.5em' }}>
+              <a href="https://tracker.debian.org/pkg/partial-json-parser" style={{ fontWeight: 500, color: '#1976d2', textDecoration: 'none', marginRight: 8 }}>python3-partial-json-parser</a>
+              <a href="https://tracker.debian.org/pkg/partial-json-parser" style={{ color: '#1976d2', textDecoration: 'underline' }}>tracker</a>
+            </li>
           </ul>
           <Typography variant="body1" sx={{ mt: 2 }}>
-            You can find my packages on the <a href="https://qa.debian.org/developer.php?login=kouhei.sendai%40gmail.com">Debian</a>.
+            You can find all my packages and contributions on my <a href="https://qa.debian.org/developer.php?login=kouhei.sendai%40gmail.com">Debian Developer page</a>.
           </Typography>
         </Paper>
 
