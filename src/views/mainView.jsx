@@ -295,7 +295,7 @@ const MainView = function mainview() {
               <a href="https://tracker.debian.org/pkg/partial-json-parser" style={{ color: '#1976d2', textDecoration: 'underline' }}>tracker</a>
             </li>
             <li style={{ marginBottom: '0.5em' }}>
-              <a href="https://tracker.debian.org/pkg/blake3-py" style={{ fontWeight: 500, color: '#1976d2', textDecoration: 'none', marginRight: 8 }}>python3-partial-json-parser</a>
+              <a href="https://tracker.debian.org/pkg/blake3-py" style={{ fontWeight: 500, color: '#1976d2', textDecoration: 'none', marginRight: 8 }}>python3-blake3</a>
               <a href="https://tracker.debian.org/pkg/blake3-py" style={{ color: '#1976d2', textDecoration: 'underline' }}>tracker</a>
             </li>
             <li style={{ marginBottom: '0.5em' }}>
