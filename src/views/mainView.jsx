@@ -294,6 +294,14 @@ const MainView = function mainview() {
               <a href="https://tracker.debian.org/pkg/partial-json-parser" style={{ fontWeight: 500, color: '#1976d2', textDecoration: 'none', marginRight: 8 }}>python3-partial-json-parser</a>
               <a href="https://tracker.debian.org/pkg/partial-json-parser" style={{ color: '#1976d2', textDecoration: 'underline' }}>tracker</a>
             </li>
+            <li style={{ marginBottom: '0.5em' }}>
+              <a href="https://tracker.debian.org/pkg/blake3-py" style={{ fontWeight: 500, color: '#1976d2', textDecoration: 'none', marginRight: 8 }}>python3-partial-json-parser</a>
+              <a href="https://tracker.debian.org/pkg/blake3-py" style={{ color: '#1976d2', textDecoration: 'underline' }}>tracker</a>
+            </li>
+            <li style={{ marginBottom: '0.5em' }}>
+              <a href="https://tracker.debian.org/pkg/prometheus-fastapi-instrumentator" style={{ fontWeight: 500, color: '#1976d2', textDecoration: 'none', marginRight: 8 }}>python3-prometheus-fastapi-instrumentator</a>
+              <a href="https://tracker.debian.org/pkg/prometheus-fastapi-instrumentator" style={{ color: '#1976d2', textDecoration: 'underline' }}>tracker</a>
+            </li>
           </ul>
           <Typography variant="body1" sx={{ mt: 2 }}>
             You can find all my packages and contributions on my <a href="https://qa.debian.org/developer.php?login=kouhei.sendai%40gmail.com">Debian Developer page</a>.
