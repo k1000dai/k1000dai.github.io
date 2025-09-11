@@ -128,8 +128,8 @@ const MainView = function mainview() {
               }
             }}>
               <CardContent>
-                <Typography variant="h6" color="primary" sx={{ fontSize: '1.3rem' }}>2025.05 ~ now </Typography>
-                <Typography sx={{ fontSize: '1.1rem', mt: 1 }}>Google Summer of Code : Debian Project "Package LLM Inference Libraries"</Typography>
+                <Typography variant="h6" color="primary" sx={{ fontSize: '1.3rem' }}>2025.05 ~ 2025.09 </Typography>
+                <Typography sx={{ fontSize: '1.1rem', mt: 1 }}>Google Summer of Code : Debian Project "Package LLM Inference Libraries" <a href="https://salsa.debian.org/k1000dai/gsoc-status">GSoC Status</a></Typography>
               </CardContent>
             </Card>
             <Card variant="outlined" sx={{ 
