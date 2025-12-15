@@ -269,6 +269,35 @@ const MainView = function mainview() {
             ))}
           </Stack>
         </Paper>
+
+        {/* Papers Section */}
+        <Paper elevation={2} sx={{ p: 3 }}>
+          <Typography variant="h4" component="h1" gutterBottom>
+            PAPERS
+          </Typography>
+          <Divider sx={{ mb: 2 }} />
+          <Stack spacing={2}>
+            <Card variant="outlined" sx={{
+              '&:hover': {
+                boxShadow: 3,
+                transform: 'scale(1.01)',
+                transition: 'all 0.2s ease-in-out'
+              }
+            }}>
+              <CardContent>
+                <Typography variant="h6" color="primary" sx={{ fontSize: '1.3rem' }}>
+                  <a href="https://arxiv.org/abs/2509.23224" style={{ color: 'inherit', textDecoration: 'none' }}>
+                    Leave No Observation Behind: Real-time Correction for VLA Action Chunks
+                  </a>
+                </Typography>
+                <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
+                  <a href="https://arxiv.org/abs/2509.23224">arXiv:2509.23224</a>
+                </Typography>
+              </CardContent>
+            </Card>
+          </Stack>
+        </Paper>
+
         {/* Debian Maintainer Section */}
         <Paper elevation={2} sx={{ p: 3 }}>
           <Typography variant="h4" component="h1" gutterBottom>
