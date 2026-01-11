@@ -18,7 +18,8 @@ const MainView = function mainview() {
       ["🇨🇳", "China"], ["🇭🇰", "Hong Kong"], ["🇮🇳", "India"],
       ["🇯🇵", "Japan"], ["🇰🇿", "Kazakhstan"], ["🇰🇷", "Korea"],
       ["🇲🇴", "Macau"], ["🇲🇾", "Malaysia"], ["🇵🇭", "Philippines"],
-      ["🇸🇬", "Singapore"], ["🇹🇼", "Taiwan"], ["🇹🇭", "Thailand"],["🇹🇷","Turkey"]
+      ["🇸🇬", "Singapore"], ["🇹🇼", "Taiwan"], ["🇹🇭", "Thailand"],["🇹🇷","Turkey"],
+      ["🇻🇳", "Vietnam"]
     ],
     europe: [
       ["🇦🇹", "Austria"], ["🇧🇪", "Belgium"], ["🇨🇿", "Czech"],
@@ -97,7 +98,7 @@ const MainView = function mainview() {
   );
 
   return (
-    <Box className="main" sx={{ maxWidth: 1200, margin: '0 auto', mt: 8 }}>
+    <Box className="main" sx={{ maxWidth: 1200, margin: "0 auto" }}>
       <Stack spacing={4}>
         {/* About Section */}
         <Paper elevation={2} sx={{ p: 3 }}>

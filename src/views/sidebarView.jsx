@@ -1,201 +1,205 @@
 import "/src/style.css";
 import React from "react";
-import { styled, useTheme } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import MuiDrawer from '@mui/material/Drawer';
-import MuiAppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import List from '@mui/material/List';
-import CssBaseline from '@mui/material/CssBaseline';
-import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import HomeIcon from '@mui/icons-material/Home';
-import MailIcon from '@mui/icons-material/Mail';
-import HubTwoToneIcon from '@mui/icons-material/HubTwoTone';
-import CasinoIcon from '@mui/icons-material/Casino';
-import { HowToReg } from "@mui/icons-material";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import Box from "@mui/material/Box";
+import Drawer from "@mui/material/Drawer";
+import AppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import List from "@mui/material/List";
+import Typography from "@mui/material/Typography";
+import Divider from "@mui/material/Divider";
+import IconButton from "@mui/material/IconButton";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import MenuIcon from "@mui/icons-material/Menu";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import HomeIcon from "@mui/icons-material/Home";
+import MailIcon from "@mui/icons-material/Mail";
+import HubTwoToneIcon from "@mui/icons-material/HubTwoTone";
+import CasinoIcon from "@mui/icons-material/Casino";
+import { NavLink } from "react-router-dom";
 
-const drawerWidth = 240;
+const drawerWidth = 280;
 
-const openedMixin = (theme) => ({
-    width: drawerWidth,
-    transition: theme.transitions.create('width', {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-    overflowX: 'hidden',
-  });
-  
-const closedMixin = (theme) => ({
-    transition: theme.transitions.create('width', {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
-    overflowX: 'hidden',
-    width: `calc(${theme.spacing(7)} + 1px)`,
-    [theme.breakpoints.up('sm')]: {
-      width: `calc(${theme.spacing(8)} + 1px)`,
-    },
-  });
+const navItems = [
+    { label: "About", to: "/", icon: <HomeIcon /> },
+    { label: "Contact", to: "/contact", icon: <MailIcon /> },
+    { label: "SNS", to: "/sns", icon: <HubTwoToneIcon /> },
+    { label: "Magic 8 Ball", to: "/magic8ball", icon: <CasinoIcon /> },
+];
 
-const DrawerHeader = styled('div')(({ theme }) => ({
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'flex-end',
-    padding: theme.spacing(0, 1),
-    // necessary for content to be below app bar
-    ...theme.mixins.toolbar,
-  }));
-
-const AppBar = styled(MuiAppBar, {
-    shouldForwardProp: (prop) => prop !== 'open',
-  })(({ theme }) => ({
-    zIndex: theme.zIndex.drawer + 1,
-    backgroundColor: '#AAE1EF',
-    color: 'black',
-    transition: theme.transitions.create(['width', 'margin'], {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
-    variants: [
-      {
-        props: ({ open }) => open,
-        style: {
-          marginLeft: drawerWidth,
-          width: `calc(100% - ${drawerWidth}px)`,
-          transition: theme.transitions.create(['width', 'margin'], {
-            easing: theme.transitions.easing.sharp,
-            duration: theme.transitions.duration.enteringScreen,
-          }),
-        },
-      },
-    ],
-  }));
-
-const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' })(
-    ({ theme }) => ({
-      width: drawerWidth,
-      flexShrink: 0,
-      whiteSpace: 'nowrap',
-      boxSizing: 'border-box',
-      variants: [
-        {
-          props: ({ open }) => open,
-          style: {
-            ...openedMixin(theme),
-            '& .MuiDrawer-paper': openedMixin(theme),
-          },
-        },
-        {
-          props: ({ open }) => !open,
-          style: {
-            ...closedMixin(theme),
-            '& .MuiDrawer-paper': closedMixin(theme),
-          },
-        },
-      ],
-    }),
-  );
-
-const SidebarView = function sidebarview() {
+const SidebarView = function sidebarview({ children }) {
     const theme = useTheme();
-    const [open, setOpen] = React.useState(false);
+    const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
+    const [mobileOpen, setMobileOpen] = React.useState(false);
 
-    const handleDrawerOpen = () => {
-        setOpen(true);
+    const handleDrawerToggle = () => {
+        setMobileOpen((prev) => !prev);
     };
 
-    const handleDrawerClose = () => {
-        setOpen(false);
-    };
-    return (
-        <div className="sidebar">
-            <Box sx={{ display: 'flex' }}>
-            <CssBaseline />
-            <AppBar position="fixed" open={open} >
-                <Toolbar>
-                <IconButton
-                    color="inherit"
-                    aria-label="open drawer"
-                    onClick={handleDrawerOpen}
-                    edge="start"
-                    sx={[
-                    {
-                        marginRight: 5,
-                    },
-                    open && { display: 'none' },
-                    ]}
-                >
-                <MenuIcon />
-                </IconButton>
-                <Typography onClick={() => {window.location.hash="#/"}} className="topname" variant="h4" noWrap component="div" style={{padding: '10px'}}>
-                Kohei Sendai / 千代 航平
+    const drawerContent = (
+        <Box sx={{ display: "flex", flexDirection: "column", height: "100%" }}>
+            <Toolbar sx={{ justifyContent: "space-between", px: 2 }}>
+                <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>
+                    Navigation
                 </Typography>
-                update 2025.12.15
+                {!isDesktop && (
+                    <IconButton onClick={handleDrawerToggle} aria-label="close navigation">
+                        <ChevronLeftIcon />
+                    </IconButton>
+                )}
+            </Toolbar>
+            <Divider />
+            <Box sx={{ px: 3, py: 3, textAlign: "center" }}>
+                <Box
+                    component="img"
+                    src="face.jpeg"
+                    alt="Kohei Sendai"
+                    loading="lazy"
+                    sx={{
+                        width: 160,
+                        height: 160,
+                        borderRadius: "50%",
+                        objectFit: "cover",
+                        margin: "0 auto 16px",
+                        boxShadow: "var(--shadow-soft)",
+                    }}
+                />
+                <Typography variant="h6" sx={{ fontWeight: 700 }}>
+                    Kohei Sendai
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                    Systems Innovation · Robotics
+                </Typography>
+            </Box>
+            <Divider />
+            <List sx={{ px: 1, py: 1 }}>
+                {navItems.map((item) => (
+                    <ListItem key={item.label} disablePadding sx={{ mb: 0.5 }}>
+                        <ListItemButton
+                            component={NavLink}
+                            to={item.to}
+                            end={item.to === "/"}
+                            sx={{
+                                borderRadius: 2,
+                                "&.active": {
+                                    backgroundColor: "rgba(44, 110, 107, 0.14)",
+                                    color: "primary.main",
+                                    "& .MuiListItemIcon-root": {
+                                        color: "primary.main",
+                                    },
+                                },
+                            }}
+                            onClick={() => {
+                                if (!isDesktop) {
+                                    setMobileOpen(false);
+                                }
+                            }}
+                        >
+                            <ListItemIcon sx={{ minWidth: 40 }}>
+                                {item.icon}
+                            </ListItemIcon>
+                            <ListItemText primary={item.label} />
+                        </ListItemButton>
+                    </ListItem>
+                ))}
+            </List>
+            <Box sx={{ mt: "auto", px: 3, pb: 3 }}>
+                <Typography variant="caption" color="text.secondary">
+                    Updated 2025.12.15
+                </Typography>
+            </Box>
+        </Box>
+    );
+
+    return (
+        <Box sx={{ display: "flex", minHeight: "100vh" }}>
+            <AppBar
+                position="fixed"
+                color="transparent"
+                elevation={0}
+                sx={{
+                    width: { md: `calc(100% - ${drawerWidth}px)` },
+                    ml: { md: `${drawerWidth}px` },
+                    borderBottom: "1px solid rgba(31, 28, 26, 0.08)",
+                    backgroundColor: "rgba(255, 253, 249, 0.9)",
+                    backdropFilter: "blur(14px)",
+                }}
+            >
+                <Toolbar
+                    sx={{
+                        minHeight: { xs: 64, md: 72 },
+                        gap: 2,
+                        px: { xs: 2, md: 3 },
+                    }}
+                >
+                    <IconButton
+                        color="inherit"
+                        edge="start"
+                        aria-label="open navigation"
+                        onClick={handleDrawerToggle}
+                        sx={{ display: { md: "none" } }}
+                    >
+                        <MenuIcon />
+                    </IconButton>
+                    <Box
+                        sx={{
+                            display: "flex",
+                            flexDirection: { xs: "column", sm: "row" },
+                            gap: { xs: 0.5, sm: 2 },
+                            alignItems: { xs: "flex-start", sm: "center" },
+                        }}
+                    >
+                        <Typography
+                            variant="h5"
+                            className="topname"
+                            sx={{ fontWeight: 700 }}
+                        >
+                            Kohei Sendai / 千代 航平
+                        </Typography>
+                        <Typography variant="caption" color="text.secondary">
+                            Portfolio
+                        </Typography>
+                    </Box>
                 </Toolbar>
             </AppBar>
-            <Drawer variant="permanent" open={open}>
-                <DrawerHeader>
-                {open && (<div>
-                    <IconButton onClick={handleDrawerClose}>
-                     <ChevronLeftIcon /> 
-                    </IconButton>
-                </div>)}
-                </DrawerHeader>
-            {open && (<div>
-            <Divider />
-            <img className="face-image" onClick={() => {window.location.hash="#/"}} src="face.jpeg" alt="face" width="200" height="200"　style={{ borderRadius: '50%', display: 'block',margin: '0 auto', padding: '10px' }}/>
-            <Divider />
-            </div>
-            )
-            }
-            
-            <List>
-                <ListItem key="About" disablePadding onClick={() => {window.location.hash="#/"}}>
-                <ListItemButton>
-                    <ListItemIcon>
-                    <HomeIcon/>
-                    </ListItemIcon>
-                    <ListItemText primary="About" />
-                </ListItemButton> 
-                </ListItem>
-                <ListItem key="Contact" disablePadding onClick={() => {window.location.hash="#/contact"}}>
-                <ListItemButton>
-                    <ListItemIcon>
-                    <MailIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="Contact" />
-                </ListItemButton>
-                </ListItem>
-                <ListItem key="SNS" disablePadding onClick={() => {window.location.hash="#/sns"}}>
-                <ListItemButton>
-                    <ListItemIcon>
-                    <HubTwoToneIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="SNS" />
-                </ListItemButton>
-                </ListItem>
-                <ListItem key="Magic8Ball" disablePadding onClick={() => {window.location.hash="#/magic8ball"}}>
-                <ListItemButton>
-                    <ListItemIcon>
-                    <CasinoIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="Magic 8 Ball" />
-                </ListItemButton>
-                </ListItem>
-            </List>
-        </Drawer>
+
+            <Drawer
+                variant={isDesktop ? "permanent" : "temporary"}
+                open={isDesktop || mobileOpen}
+                onClose={handleDrawerToggle}
+                ModalProps={{ keepMounted: true }}
+                sx={{
+                    width: drawerWidth,
+                    flexShrink: 0,
+                    "& .MuiDrawer-paper": {
+                        width: drawerWidth,
+                        borderRight: "1px solid rgba(31, 28, 26, 0.08)",
+                        backgroundColor: "rgba(255, 253, 249, 0.95)",
+                        backdropFilter: "blur(12px)",
+                    },
+                }}
+            >
+                {drawerContent}
+            </Drawer>
+
+            <Box
+                component="main"
+                sx={{
+                    flexGrow: 1,
+                    width: { md: `calc(100% - ${drawerWidth}px)` },
+                    px: { xs: 2, sm: 3, md: 5 },
+                    pb: { xs: 4, md: 6 },
+                    pt: { xs: 10, md: 12 },
+                }}
+            >
+                <Box sx={{ animation: "riseIn 0.6s ease-out" }}>{children}</Box>
+            </Box>
         </Box>
-        </div>
     );
-}
+};
 
 export { SidebarView };

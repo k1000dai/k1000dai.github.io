@@ -5,6 +5,7 @@ import Divider from '@mui/material/Divider';
 import EmailIcon from '@mui/icons-material/Email';
 import HomeIcon from '@mui/icons-material/Home';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
+import { useNavigate } from "react-router-dom";
 
 const EmailCard = ({ title, email }) => {
     const [openSnackbar, setOpenSnackbar] = useState(false);
@@ -75,9 +76,11 @@ const EmailCard = ({ title, email }) => {
 };
 
 const ContactView = function contactview() {
+  const navigate = useNavigate();
+
   return (
-    <Box className="contact" sx={{ maxWidth: 800, margin: '0 auto', p: 3, mt: 8 }}>
-      <Paper elevation={2} sx={{ p: 4 }}>
+    <Box className="contact" sx={{ maxWidth: 880, margin: "0 auto" }}>
+      <Paper elevation={2} sx={{ p: { xs: 3, md: 4 } }}>
         <Typography variant="h4" gutterBottom align="center">
           Contact Information
         </Typography>
@@ -103,13 +106,13 @@ const ContactView = function contactview() {
           />
         </Box>
 
-        <Box sx={{ textAlign: 'center' }}>
+        <Box sx={{ textAlign: "center" }}>
           <Button
             variant="contained"
             color="primary"
             size="large"
             startIcon={<HomeIcon />}
-            onClick={() => {window.location.hash="#/"}}
+            onClick={() => navigate("/")}
             sx={{
               px: 4,
               py: 1.5,

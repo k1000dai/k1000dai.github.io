@@ -3,6 +3,7 @@ import { Box, Card, CardContent, Typography, Button, Paper, Stack } from '@mui/m
 import Divider from '@mui/material/Divider';
 import { GitHub, Instagram, Twitter, LinkedIn, Home as HomeIcon } from "@mui/icons-material";
 import CreateIcon from '@mui/icons-material/Create';
+import { useNavigate } from "react-router-dom";
 
 const SocialCard = ({ icon, platform, username, link }) => (
   <Card 
@@ -41,6 +42,7 @@ const SocialCard = ({ icon, platform, username, link }) => (
 );
 
 const SnsView = function snsview() {
+  const navigate = useNavigate();
   const socialLinks = [
     {
       platform: "GitHub",
@@ -75,8 +77,8 @@ const SnsView = function snsview() {
   ];
 
   return (
-    <Box className="sns" sx={{ maxWidth: 1200, margin: '0 auto', p: 3, mt: 8 }}>
-      <Paper elevation={2} sx={{ p: 4 }}>
+    <Box className="sns" sx={{ maxWidth: 1200, margin: "0 auto" }}>
+      <Paper elevation={2} sx={{ p: { xs: 3, md: 4 } }}>
         <Typography variant="h4" gutterBottom align="center">
           Social Media & Links
         </Typography>
@@ -103,13 +105,13 @@ const SnsView = function snsview() {
           ))}
         </Stack>
 
-        <Box sx={{ textAlign: 'center' }}>
+        <Box sx={{ textAlign: "center" }}>
           <Button
             variant="contained"
             color="primary"
             size="large"
             startIcon={<HomeIcon />}
-            onClick={() => {window.location.hash="#/"}}
+            onClick={() => navigate("/")}
             sx={{
               px: 4,
               py: 1.5,

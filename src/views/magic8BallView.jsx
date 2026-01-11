@@ -34,41 +34,49 @@ export const Magic8BallView = () => {
     };
 
     return (
-        <Box sx={{ 
-            display: 'flex', 
-            flexDirection: 'column',
-            alignItems: 'center', 
-            justifyContent: 'center',
-            minHeight: '80vh',
-            padding: 3,
-            mt: 8
-        }}>
+        <Box
+            sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                minHeight: { xs: "70vh", md: "80vh" },
+                padding: { xs: 2, md: 3 },
+                textAlign: "center",
+            }}
+        >
             <Typography variant="h4" gutterBottom>
                 Programming Magic 8 Ball
             </Typography>
-            <Typography variant="subtitle1" gutterBottom sx={{ mb: 4 }}>
+            <Typography variant="subtitle1" gutterBottom sx={{ mb: 4, maxWidth: 520 }}>
                 Ask any programming question, and the Magic 8 Ball will guide you!
             </Typography>
             
-            <Card sx={{ 
-                width: 300,
-                height: 300,
-                borderRadius: '50%',
-                background: 'linear-gradient(135deg, #000000 0%, #303030 100%)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                transform: isShaking ? 'translateX(-5px)' : 'none',
-                animation: isShaking ? 'shake 0.5s infinite' : 'none',
-                mb: 4
-            }}>
-                <CardContent>
-                    <Typography variant="body1" sx={{ 
-                        color: '#fff',
-                        textAlign: 'center',
-                        opacity: answer ? 1 : 0,
-                        transition: 'opacity 0.5s'
-                    }}>
+            <Card
+                sx={{
+                    width: { xs: 220, sm: 260, md: 300 },
+                    height: { xs: 220, sm: 260, md: 300 },
+                    borderRadius: "50%",
+                    background: "linear-gradient(135deg, #0B0B0B 0%, #2F2F2F 100%)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    transform: isShaking ? "translateX(-5px)" : "none",
+                    animation: isShaking ? "shake 0.5s infinite" : "none",
+                    mb: 4,
+                    boxShadow: "0 18px 45px rgba(0, 0, 0, 0.25)",
+                }}
+            >
+                <CardContent sx={{ px: 2 }}>
+                    <Typography
+                        variant="body1"
+                        sx={{
+                            color: "#fff",
+                            textAlign: "center",
+                            opacity: answer ? 1 : 0,
+                            transition: "opacity 0.5s",
+                        }}
+                    >
                         {answer}
                     </Typography>
                 </CardContent>
