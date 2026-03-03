@@ -1,6 +1,6 @@
 import "/src/style.css";
 import React from "react";
-import { useTheme } from "@mui/material/styles";
+import { useTheme, alpha } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
@@ -86,7 +86,7 @@ const SidebarView = function sidebarview({ children }) {
                             sx={{
                                 borderRadius: 2,
                                 "&.active": {
-                                    backgroundColor: "rgba(44, 110, 107, 0.14)",
+                                    backgroundColor: alpha(theme.palette.primary.main, 0.2),
                                     color: "primary.main",
                                     "& .MuiListItemIcon-root": {
                                         color: "primary.main",
@@ -124,8 +124,8 @@ const SidebarView = function sidebarview({ children }) {
                 sx={{
                     width: { md: `calc(100% - ${drawerWidth}px)` },
                     ml: { md: `${drawerWidth}px` },
-                    borderBottom: "1px solid rgba(31, 28, 26, 0.08)",
-                    backgroundColor: "rgba(255, 253, 249, 0.9)",
+                    borderBottom: `1px solid ${theme.palette.divider}`,
+                    backgroundColor: alpha(theme.palette.background.paper, 0.85),
                     backdropFilter: "blur(14px)",
                 }}
             >
@@ -177,8 +177,8 @@ const SidebarView = function sidebarview({ children }) {
                     flexShrink: 0,
                     "& .MuiDrawer-paper": {
                         width: drawerWidth,
-                        borderRight: "1px solid rgba(31, 28, 26, 0.08)",
-                        backgroundColor: "rgba(255, 253, 249, 0.95)",
+                        borderRight: `1px solid ${theme.palette.divider}`,
+                        backgroundColor: alpha(theme.palette.background.paper, 0.92),
                         backdropFilter: "blur(12px)",
                     },
                 }}

@@ -97,6 +97,38 @@ const MainView = function mainview() {
     (total, region) => total + region.length, 0
   );
 
+  const maintainedPackages = [
+    { name: "accelerate", tracker: "https://tracker.debian.org/pkg/accelerate" },
+    { name: "blake3-py", tracker: "https://tracker.debian.org/pkg/blake3-py" },
+    { name: "huggingface-hub", tracker: "https://tracker.debian.org/pkg/huggingface-hub" },
+    { name: "interegular", tracker: "https://tracker.debian.org/pkg/interegular" },
+    { name: "partial-json-parser", tracker: "https://tracker.debian.org/pkg/partial-json-parser" },
+    { name: "prometheus-fastapi-instrumentator", tracker: "https://tracker.debian.org/pkg/prometheus-fastapi-instrumentator" },
+    { name: "rust-esaxx-rs", tracker: "https://tracker.debian.org/pkg/rust-esaxx-rs" },
+    { name: "rust-macro-rules-attribute", tracker: "https://tracker.debian.org/pkg/rust-macro-rules-attribute" },
+    { name: "rust-macro-rules-attribute-proc-macro", tracker: "https://tracker.debian.org/pkg/rust-macro-rules-attribute-proc-macro" },
+    { name: "rust-monostate", tracker: "https://tracker.debian.org/pkg/rust-monostate" },
+    { name: "rust-monostate-impl", tracker: "https://tracker.debian.org/pkg/rust-monostate-impl" },
+    { name: "rust-ndarray", tracker: "https://tracker.debian.org/pkg/rust-ndarray" },
+    { name: "rust-numpy", tracker: "https://tracker.debian.org/pkg/rust-numpy" },
+    { name: "rust-rayon-cond", tracker: "https://tracker.debian.org/pkg/rust-rayon-cond" },
+    { name: "rust-spm-precompiled", tracker: "https://tracker.debian.org/pkg/rust-spm-precompiled" },
+    { name: "rust-unicode-normalization-alignments", tracker: "https://tracker.debian.org/pkg/rust-unicode-normalization-alignments" },
+    { name: "tokenizers", tracker: "https://tracker.debian.org/pkg/tokenizers" },
+  ];
+
+  const projects = [
+    {
+      title: "VLA Leaderboard",
+      website: "https://vlaleaderboard.com/",
+      repository: "https://github.com/k1000dai/vlaleaderboard",
+    },
+    {
+      title: "AlohaScorpion",
+      repository: "https://github.com/k1000dai/AlohaScorpion",
+    },
+  ];
+
   return (
     <Box className="main" sx={{ maxWidth: 1200, margin: "0 auto" }}>
       <Stack spacing={4}>
@@ -121,6 +153,18 @@ const MainView = function mainview() {
           </Typography>
           <Divider sx={{ mb: 2 }} />
           <Stack spacing={2}>
+    <Card variant="outlined" sx={{
+              '&:hover': {
+                boxShadow: 3,
+                transform: 'scale(1.01)',
+                transition: 'all 0.2s ease-in-out'
+              }
+            }}>
+              <CardContent>
+                <Typography variant="h6" color="primary" sx={{ fontSize: '1.3rem' }}>2025.10 ~  </Typography>
+                <Typography sx={{ fontSize: '1.1rem', mt: 1 }}>Research Intern at AI Robot Association (AIRoA) <a href="https://www.airoa.org/ja">HP</a></Typography>
+              </CardContent>
+            </Card>
             <Card variant="outlined" sx={{
               '&:hover': {
                 boxShadow: 3,
@@ -299,6 +343,43 @@ const MainView = function mainview() {
           </Stack>
         </Paper>
 
+        {/* Projects Section */}
+        <Paper elevation={2} sx={{ p: 3 }}>
+          <Typography variant="h4" component="h1" gutterBottom>
+            PROJECTS
+          </Typography>
+          <Divider sx={{ mb: 2 }} />
+          <Stack spacing={2}>
+            {projects.map((project) => (
+              <Card
+                key={project.title}
+                variant="outlined"
+                sx={{
+                  '&:hover': {
+                    boxShadow: 3,
+                    transform: 'scale(1.01)',
+                    transition: 'all 0.2s ease-in-out'
+                  }
+                }}
+              >
+                <CardContent>
+                  <Typography variant="h6" color="primary" sx={{ fontSize: '1.3rem', mb: 1 }}>
+                    {project.title}
+                  </Typography>
+                  {project.website && (
+                    <Typography variant="body1" sx={{ mb: 0.5 }}>
+                      <a href={project.website}>Website</a>
+                    </Typography>
+                  )}
+                  <Typography variant="body1">
+                    <a href={project.repository}>GitHub Repository</a>
+                  </Typography>
+                </CardContent>
+              </Card>
+            ))}
+          </Stack>
+        </Paper>
+
         {/* Debian Maintainer Section */}
         <Paper elevation={2} sx={{ p: 3 }}>
           <Typography variant="h4" component="h1" gutterBottom>
@@ -306,32 +387,18 @@ const MainView = function mainview() {
           </Typography>
           <Divider sx={{ mb: 2 }} />
           <Typography variant="body1">
-            I am a Debian Maintainer, and I maintain the following packages:
+            I am a Debian Maintainer. The list below mirrors the main (17) packages shown on my Debian QA profile.
           </Typography>
           <Typography variant="body1" sx={{ mb: 1 }}>
-            Currently maintained packages:
+            Main packages:
           </Typography>
           <ul style={{ listStyle: 'none', paddingLeft: 0, margin: 0 }}>
-            <li style={{ marginBottom: '0.5em' }}>
-              <a href="https://tracker.debian.org/pkg/huggingface-hub" style={{ fontWeight: 500, color: '#1976d2', textDecoration: 'none', marginRight: 8 }}>python3-huggingface-hub</a>
-              <a href="https://tracker.debian.org/pkg/huggingface-hub" style={{ color: '#1976d2', textDecoration: 'underline' }}>tracker</a>
-            </li>
-            <li style={{ marginBottom: '0.5em' }}>
-              <a href="https://tracker.debian.org/pkg/interegular" style={{ fontWeight: 500, color: '#1976d2', textDecoration: 'none', marginRight: 8 }}>python3-interegular</a>
-              <a href="https://tracker.debian.org/pkg/interegular" style={{ color: '#1976d2', textDecoration: 'underline' }}>tracker</a>
-            </li>
-            <li style={{ marginBottom: '0.5em' }}>
-              <a href="https://tracker.debian.org/pkg/partial-json-parser" style={{ fontWeight: 500, color: '#1976d2', textDecoration: 'none', marginRight: 8 }}>python3-partial-json-parser</a>
-              <a href="https://tracker.debian.org/pkg/partial-json-parser" style={{ color: '#1976d2', textDecoration: 'underline' }}>tracker</a>
-            </li>
-            <li style={{ marginBottom: '0.5em' }}>
-              <a href="https://tracker.debian.org/pkg/blake3-py" style={{ fontWeight: 500, color: '#1976d2', textDecoration: 'none', marginRight: 8 }}>python3-blake3</a>
-              <a href="https://tracker.debian.org/pkg/blake3-py" style={{ color: '#1976d2', textDecoration: 'underline' }}>tracker</a>
-            </li>
-            <li style={{ marginBottom: '0.5em' }}>
-              <a href="https://tracker.debian.org/pkg/prometheus-fastapi-instrumentator" style={{ fontWeight: 500, color: '#1976d2', textDecoration: 'none', marginRight: 8 }}>python3-prometheus-fastapi-instrumentator</a>
-              <a href="https://tracker.debian.org/pkg/prometheus-fastapi-instrumentator" style={{ color: '#1976d2', textDecoration: 'underline' }}>tracker</a>
-            </li>
+            {maintainedPackages.map((pkg) => (
+              <li key={pkg.name} style={{ marginBottom: '0.5em' }}>
+                <a href={pkg.tracker} style={{ fontWeight: 500, color: 'var(--primary-color)', textDecoration: 'none', marginRight: 8 }}>{pkg.name}</a>
+                <a href={pkg.tracker} style={{ color: 'var(--secondary-color)', textDecoration: 'underline' }}>tracker</a>
+              </li>
+            ))}
           </ul>
           <Typography variant="body1" sx={{ mt: 2 }}>
             You can find all my packages and contributions on my <a href="https://qa.debian.org/developer.php?login=kouhei.sendai%40gmail.com">Debian Developer page</a>.

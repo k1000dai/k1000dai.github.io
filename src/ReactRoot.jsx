@@ -10,11 +10,11 @@ import CssBaseline from "@mui/material/CssBaseline";
 
 const theme = createTheme({
     palette: {
-        mode: "light",
-        primary: { main: "#2C6E6B" },
-        secondary: { main: "#F2A65A" },
-        background: { default: "#F8F4EF", paper: "#FFFDF9" },
-        text: { primary: "#1F1C1A", secondary: "#5B544E" },
+        mode: "dark",
+        primary: { main: "#58C8BF" },
+        secondary: { main: "#F4BC7D" },
+        background: { default: "#0B1118", paper: "#141B23" },
+        text: { primary: "#E7EDF3", secondary: "#98A6B7" },
     },
     typography: {
         fontFamily: '"Manrope", "Noto Sans JP", sans-serif',
@@ -27,9 +27,23 @@ const theme = createTheme({
             letterSpacing: "0.02em",
         },
     },
-    shape: { borderRadius: 16 },
+    shape: { borderRadius: 14 },
     components: {
-        MuiPaper: { styleOverrides: { root: { backgroundImage: "none" } } },
+        MuiPaper: {
+            styleOverrides: {
+                root: {
+                    backgroundImage: "none",
+                    border: "1px solid rgba(151, 164, 179, 0.18)",
+                },
+            },
+        },
+        MuiCard: {
+            styleOverrides: {
+                root: {
+                    borderColor: "rgba(151, 164, 179, 0.2)",
+                },
+            },
+        },
         MuiButton: { styleOverrides: { root: { textTransform: "none" } } },
     },
 });
