@@ -30,6 +30,7 @@ const navItems = [
     { label: "SNS", to: "/sns", icon: <HubTwoToneIcon /> },
     { label: "Magic 8 Ball", to: "/magic8ball", icon: <CasinoIcon /> },
 ];
+const headerToolbarHeight = { xs: 64, md: 72 };
 
 const SidebarView = function sidebarview({ children }) {
     const theme = useTheme();
@@ -42,7 +43,13 @@ const SidebarView = function sidebarview({ children }) {
 
     const drawerContent = (
         <Box sx={{ display: "flex", flexDirection: "column", height: "100%" }}>
-            <Toolbar sx={{ justifyContent: "space-between", px: 2 }}>
+            <Toolbar
+                sx={{
+                    minHeight: headerToolbarHeight,
+                    justifyContent: "space-between",
+                    px: { xs: 2, md: 3 },
+                }}
+            >
                 <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>
                     Navigation
                 </Typography>
@@ -131,7 +138,7 @@ const SidebarView = function sidebarview({ children }) {
             >
                 <Toolbar
                     sx={{
-                        minHeight: { xs: 64, md: 72 },
+                        minHeight: headerToolbarHeight,
                         gap: 2,
                         px: { xs: 2, md: 3 },
                     }}
