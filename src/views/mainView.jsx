@@ -161,7 +161,7 @@ const MainView = function mainview() {
               }
             }}>
               <CardContent>
-                <Typography variant="h6" color="primary" sx={{ fontSize: '1.3rem' }}>2025.10 ~  </Typography>
+                <Typography variant="h6" color="primary" sx={{ fontSize: '1.3rem' }}>2025.10 ~  2026.03</Typography>
                 <Typography sx={{ fontSize: '1.1rem', mt: 1 }}>Research Intern at AI Robot Association (AIRoA) <a href="https://www.airoa.org/ja">HP</a></Typography>
               </CardContent>
             </Card>
