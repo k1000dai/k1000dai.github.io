@@ -139,10 +139,9 @@ const MainView = function mainview() {
           </Typography>
           <Divider sx={{ mb: 2 }} />
           <Typography variant="body1" >
-            Undergraduate student, B4, University of Tokyo. Systems Innovation, Faculty of Engineering
-          </Typography>
+            Graduate student, M1, University of Tokyo. Faculty of Engineering, Department of Technology Management for Innovation.</Typography>
           <Typography variant="body1">
-            Matsuo Iwasawa Labratory, Research on Robotics, Physical AI
+            Matsuo Iwasawa Labratory, Research on Robotics, Physical AI, and other related fields. I am also a Debian Maintainer and an open-source enthusiast. I have experience in various internships and projects, and I am passionate about learning new technologies and contributing to the community.
           </Typography>
         </Paper>
 
