@@ -2,11 +2,16 @@ import { MainView } from "./views/mainView";
 import { SidebarView } from "./views/sidebarView";
 import { ContactView } from "./views/contactView";
 import { SnsView } from "./views/snsView";
-import { Magic8BallView } from "./views/magic8BallView";
 import { createHashRouter, RouterProvider, Outlet } from "react-router-dom";
-import { Box } from "@mui/material";
+import { lazy, Suspense } from "react";
+import { Box, Typography } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
+
+const Magic8BallView = lazy(async () => {
+    const module = await import("./views/magic8BallView");
+    return { default: module.Magic8BallView };
+});
 
 const theme = createTheme({
     palette: {
@@ -65,7 +70,22 @@ function makeRouter() {
                 { index: true, element: <MainView /> },
                 { path: "contact", element: <ContactView /> },
                 { path: "sns", element: <SnsView /> },
-                { path: "magic8ball", element: <Magic8BallView /> },
+                {
+                    path: "magic8ball",
+                    element: (
+                        <Suspense
+                            fallback={(
+                                <Box sx={{ py: 6 }}>
+                                    <Typography variant="body1" color="text.secondary">
+                                        Loading exporter...
+                                    </Typography>
+                                </Box>
+                            )}
+                        >
+                            <Magic8BallView />
+                        </Suspense>
+                    ),
+                },
             ],
         },
     ]);

@@ -19,7 +19,7 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import HomeIcon from "@mui/icons-material/Home";
 import MailIcon from "@mui/icons-material/Mail";
 import HubTwoToneIcon from "@mui/icons-material/HubTwoTone";
-import CasinoIcon from "@mui/icons-material/Casino";
+import FunctionsIcon from "@mui/icons-material/Functions";
 import { NavLink } from "react-router-dom";
 
 const drawerWidth = 280;
@@ -28,7 +28,7 @@ const navItems = [
     { label: "About", to: "/", icon: <HomeIcon /> },
     { label: "Contact", to: "/contact", icon: <MailIcon /> },
     { label: "SNS", to: "/sns", icon: <HubTwoToneIcon /> },
-    { label: "Magic 8 Ball", to: "/magic8ball", icon: <CasinoIcon /> },
+    { label: "TeX PNG Exporter", to: "/magic8ball", icon: <FunctionsIcon /> },
 ];
 const headerToolbarHeight = { xs: 64, md: 72 };
 
