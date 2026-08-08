@@ -9,7 +9,7 @@ import SvgIcon from '@mui/material/SvgIcon';
 
 const MainView = function mainview() {
   const skills = [
-    "Python", "C++", "Java", "JavaScript", "HTML/CSS", "React", "OCaml", "OpenMP/CUDA",
+    "Python", "C++", "Java", "JavaScript", "HTML/CSS", "React", "OCaml", "OpenMP/CUDA", "dora-rs",
     "実用英語技能検定1級", "TOEFL 103 (2025.06)","Swedish A2"
   ];
 
@@ -127,6 +127,10 @@ const MainView = function mainview() {
       title: "AlohaScorpion",
       repository: "https://github.com/k1000dai/AlohaScorpion",
     },
+    {
+      title: "Rerobot",
+      repository: "https://github.com/k1000dai/Rerobot",
+    },
   ];
 
   return (
@@ -152,7 +156,35 @@ const MainView = function mainview() {
           </Typography>
           <Divider sx={{ mb: 2 }} />
           <Stack spacing={2}>
-    <Card variant="outlined" sx={{
+            <Card variant="outlined" sx={{
+              '&:hover': {
+                boxShadow: 3,
+                transform: 'scale(1.01)',
+                transition: 'all 0.2s ease-in-out'
+              }
+            }}>
+              <CardContent>
+                <Typography variant="h6" color="primary" sx={{ fontSize: '1.3rem' }}>2026.05 ~ now</Typography>
+                <Typography sx={{ fontSize: '1.1rem', mt: 1 }}>
+                  Research Intern at OMRON SINIC X Corporation (OSX) <a href="https://www.omron.com/sinicx/internship/">Internship</a>
+                </Typography>
+              </CardContent>
+            </Card>
+            <Card variant="outlined" sx={{
+              '&:hover': {
+                boxShadow: 3,
+                transform: 'scale(1.01)',
+                transition: 'all 0.2s ease-in-out'
+              }
+            }}>
+              <CardContent>
+                <Typography variant="h6" color="primary" sx={{ fontSize: '1.3rem' }}>2026.04 ~ now</Typography>
+                <Typography sx={{ fontSize: '1.1rem', mt: 1 }}>
+                  Independent Contractor at Enactic, Inc. <a href="https://enactic.ai/">Home Page</a>
+                </Typography>
+              </CardContent>
+            </Card>
+            <Card variant="outlined" sx={{
               '&:hover': {
                 boxShadow: 3,
                 transform: 'scale(1.01)',
@@ -237,7 +269,7 @@ const MainView = function mainview() {
               }
             }}>
               <CardContent>
-                <Typography variant="h6" color="primary">2022.04 ~ now</Typography>
+                <Typography variant="h6" color="primary">2022.04 ~ 2026.03</Typography>
                 <Typography>
                   RoboTech : circuit design team <a href="https://www.youtube.com/watch?v=p26yrFr8vX8">RC 2024</a>
                 </Typography>

@@ -116,7 +116,7 @@ const SidebarView = function sidebarview({ children }) {
             </List>
             <Box sx={{ mt: "auto", px: 3, pb: 3 }}>
                 <Typography variant="caption" color="text.secondary">
-                    Updated 2025.12.15
+                    Updated 2026.08.08
                 </Typography>
             </Box>
         </Box>
