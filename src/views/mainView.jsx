@@ -362,6 +362,24 @@ const MainView = function mainview() {
             }}>
               <CardContent>
                 <Typography variant="h6" color="primary" sx={{ fontSize: '1.3rem' }}>
+                  <a href="https://arxiv.org/abs/2609.03715" style={{ color: 'inherit', textDecoration: 'none' }}>
+                    MINERVA: How Small Can a Manipulation Policy Be and Still Solve LIBERO?
+                  </a>
+                </Typography>
+                <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
+                  <a href="https://arxiv.org/abs/2609.03715">arXiv:2609.03715</a>
+                </Typography>
+              </CardContent>
+            </Card>
+            <Card variant="outlined" sx={{
+              '&:hover': {
+                boxShadow: 3,
+                transform: 'scale(1.01)',
+                transition: 'all 0.2s ease-in-out'
+              }
+            }}>
+              <CardContent>
+                <Typography variant="h6" color="primary" sx={{ fontSize: '1.3rem' }}>
                   <a href="https://arxiv.org/abs/2509.23224" style={{ color: 'inherit', textDecoration: 'none' }}>
                     Leave No Observation Behind: Real-time Correction for VLA Action Chunks
                   </a>
