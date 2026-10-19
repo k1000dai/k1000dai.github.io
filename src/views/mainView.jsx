@@ -392,6 +392,31 @@ const MainView = function mainview() {
           </Stack>
         </Paper>
 
+        {/* Lectures Section */}
+        <Paper elevation={2} sx={{ p: 3 }}>
+          <Typography variant="h4" component="h1" gutterBottom>
+            LECTURES
+          </Typography>
+          <Divider sx={{ mb: 2 }} />
+          <Stack spacing={2}>
+            <Card variant="outlined" sx={{
+              '&:hover': {
+                boxShadow: 3,
+                transform: 'scale(1.01)',
+                transition: 'all 0.2s ease-in-out'
+              }
+            }}>
+              <CardContent>
+                <Typography variant="h6" color="primary" sx={{ fontSize: '1.3rem' }}>2026.10.08</Typography>
+                <Typography sx={{ fontSize: '1.1rem', mt: 1 }}>
+                  "Open Source in Robotics" : Lecture 6 of Physical AI 応用編1 基礎理論と実践, Matsuo Iwasawa Lab{' '}
+                  <a href="https://weblab.t.u-tokyo.ac.jp/lecture/course-list/physical-ai/advanced1/">Course Page</a>
+                </Typography>
+              </CardContent>
+            </Card>
+          </Stack>
+        </Paper>
+
         {/* Projects Section */}
         <Paper elevation={2} sx={{ p: 3 }}>
           <Typography variant="h4" component="h1" gutterBottom>
